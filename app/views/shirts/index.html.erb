@@ -1,0 +1,13 @@
+<!-- index.html.erb -->
+<h1>All the shirts!</h1>
+
+<% flash.each do |name, msg| %>
+<%= content_tag :div, msg %>
+<% end %>
+
+<%= form_tag "/", method: "GET" do %>
+	<%= text_field_tag :q, params[:q] %>
+	<%= submit_tag "Search" %>
+<% end %>
+
+<%= render "list" %>

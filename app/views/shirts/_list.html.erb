@@ -1,0 +1,8 @@
+<!-- _list.html.erb -->
+<% @shirts.each do |s| %>
+<p>
+	<h3><%= s.name %></h3>
+	<%=s.description%>
+	<br /><%= image_tag s.image %>
+</p>
+<% end %>

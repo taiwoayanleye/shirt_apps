@@ -1,0 +1,2265 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)https://github.com/thoughtbot/paperclip -->
+<html lang="en" class=""><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    
+    
+    <title>thoughtbot/paperclip</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="https://github.com/opensearch.xml" title="GitHub">
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+    <link rel="apple-touch-icon" sizes="57x57" href="https://github.com/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://github.com/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://github.com/apple-touch-icon-144.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://github.com/apple-touch-icon-144.png">
+    <meta property="fb:app_id" content="1401488693436528">
+
+      <meta content="@github" name="twitter:site"><meta content="summary" name="twitter:card"><meta content="thoughtbot/paperclip" name="twitter:title"><meta content="paperclip - Easy file attachment management for ActiveRecord" name="twitter:description"><meta content="https://avatars3.githubusercontent.com/u/6183?v=2&amp;s=400" name="twitter:image:src">
+<meta content="GitHub" property="og:site_name"><meta content="object" property="og:type"><meta content="https://avatars3.githubusercontent.com/u/6183?v=2&amp;s=400" property="og:image"><meta content="thoughtbot/paperclip" property="og:title"><meta content="https://github.com/thoughtbot/paperclip" property="og:url"><meta content="paperclip - Easy file attachment management for ActiveRecord" property="og:description">
+
+      <meta name="browser-stats-url" content="/_stats">
+    <link rel="assets" href="https://assets-cdn.github.com/">
+    <link rel="conduit-xhr" href="https://ghconduit.com:25035/">
+    <link rel="xhr-socket" href="https://github.com/_sockets">
+    <meta name="pjax-timeout" content="1000">
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="selected-link" value="repo_source" data-pjax-transient="">
+      <meta name="google-analytics" content="UA-3769691-2">
+
+    <meta content="collector.githubapp.com" name="octolytics-host"><meta content="collector-cdn.github.com" name="octolytics-script-host"><meta content="github" name="octolytics-app-id"><meta content="5AC259DB:13AF:1C419580:5425E5CB" name="octolytics-dimension-request_id"><meta content="7871367" name="octolytics-actor-id"><meta content="TaiwoAyanleye" name="octolytics-actor-login"><meta content="b34646f46bdf15de4d517f8bb6e6399f0ad770a6f317d94277e1ff57be968e78" name="octolytics-actor-hash">
+    <meta content="Rails, view, files#disambiguate" name="analytics-event">
+
+    
+    
+    <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+
+
+    <meta content="authenticity_token" name="csrf-param">
+<meta content="jite9RKQStEOo4Emp0+u9Yw/z5kabb2BZjlUTXFFwgtWCeFpP0O/OT/IA8yiDK/ozdoNpPqTkZ+p8IyGqXXQeA==" name="csrf-token">
+
+    <link href="./thoughtbot paperclip_files/github-aac267329edcf91101f8b8afc0575e8e882615cc.css" media="all" rel="stylesheet" type="text/css">
+    <link href="./thoughtbot paperclip_files/github2-359fc347dc18b67ad5ddc10dadeb3d11b3a62a7b.css" media="all" rel="stylesheet" type="text/css">
+    
+
+
+    <meta http-equiv="x-pjax-version" content="534ece81402887082a5682c529bb50ec">
+
+      
+  <meta name="description" content="paperclip - Easy file attachment management for ActiveRecord">
+  <meta name="go-import" content="github.com/thoughtbot/paperclip git https://github.com/thoughtbot/paperclip.git">
+
+  <meta content="6183" name="octolytics-dimension-user_id"><meta content="thoughtbot" name="octolytics-dimension-user_login"><meta content="8393" name="octolytics-dimension-repository_id"><meta content="thoughtbot/paperclip" name="octolytics-dimension-repository_nwo"><meta content="true" name="octolytics-dimension-repository_public"><meta content="false" name="octolytics-dimension-repository_is_fork"><meta content="8393" name="octolytics-dimension-repository_network_root_id"><meta content="thoughtbot/paperclip" name="octolytics-dimension-repository_network_root_nwo">
+  <link href="https://github.com/thoughtbot/paperclip/commits/master.atom" rel="alternate" title="Recent Commits to paperclip:master" type="application/atom+xml">
+
+  <script type="text/javascript" async="" src="./thoughtbot paperclip_files/api.js"></script></head>
+
+
+  <body class="logged_in  env-production linux vis-public">
+    <a href="https://github.com/thoughtbot/paperclip#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+    <div class="wrapper">
+      
+      
+      
+      
+
+
+      <div class="header header-logged-in true">
+  <div class="container clearfix">
+
+    <a class="header-logo-invertocat" href="https://github.com/" data-hotkey="g d" aria-label="Homepage" ga-data-click="Header, go to dashboard, icon:logo">
+  <span class="mega-octicon octicon-mark-github"></span>
+</a>
+
+
+      <div class="site-search repo-scope js-site-search">
+          <form accept-charset="UTF-8" action="https://github.com/thoughtbot/paperclip/search" class="js-site-search-form" data-global-search-url="/search" data-repo-search-url="/thoughtbot/paperclip/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+  <input type="text" class="js-site-search-field is-clearable" data-hotkey="s" name="q" placeholder="Search" data-global-scope-placeholder="Search GitHub" data-repo-scope-placeholder="Search" tabindex="1" autocapitalize="off">
+  <div class="scope-badge">This repository</div>
+</form>
+      </div>
+      <ul class="header-nav left">
+        <li class="header-nav-item explore">
+          <a class="header-nav-link" href="https://github.com/explore" data-ga-click="Header, go to explore, text:explore">Explore</a>
+        </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="https://gist.github.com/" data-ga-click="Header, go to gist, text:gist">Gist</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="https://github.com/blog" data-ga-click="Header, go to blog, text:blog">Blog</a>
+          </li>
+        <li class="header-nav-item">
+          <a class="header-nav-link" href="https://help.github.com/" data-ga-click="Header, go to help, text:help">Help</a>
+        </li>
+      </ul>
+
+    
+<ul class="header-nav user-nav right" id="user-links">
+  <li class="header-nav-item dropdown js-menu-container">
+    <a class="header-nav-link name" href="https://github.com/TaiwoAyanleye" data-ga-click="Header, go to profile, text:username">
+      <img alt="Taiwo Ayanleye" class="avatar" data-user="7871367" height="20" src="./thoughtbot paperclip_files/7871367" width="20">
+      <span class="css-truncate">
+        <span class="css-truncate-target">TaiwoAyanleye</span>
+      </span>
+    </a>
+  </li>
+
+  <li class="header-nav-item dropdown js-menu-container">
+    <a class="header-nav-link js-menu-target tooltipped tooltipped-s" href="https://github.com/thoughtbot/paperclip#" aria-label="Create new..." data-ga-click="Header, create new, icon:add">
+      <span class="octicon octicon-plus"></span>
+      <span class="dropdown-caret"></span>
+    </a>
+
+    <div class="dropdown-menu-content js-menu-content">
+      
+<ul class="dropdown-menu">
+  <li>
+    <a href="https://github.com/new"><span class="octicon octicon-repo"></span> New repository</a>
+  </li>
+  <li>
+    <a href="https://github.com/organizations/new"><span class="octicon octicon-organization"></span> New organization</a>
+  </li>
+
+
+    <li class="dropdown-divider"></li>
+    <li class="dropdown-header">
+      <span title="thoughtbot/paperclip">This repository</span>
+    </li>
+      <li>
+        <a href="https://github.com/thoughtbot/paperclip/issues/new"><span class="octicon octicon-issue-opened"></span> New issue</a>
+      </li>
+</ul>
+
+    </div>
+  </li>
+
+  <li class="header-nav-item">
+        <a href="https://github.com/notifications" aria-label="You have no unread notifications" class="header-nav-link notification-indicator tooltipped tooltipped-s" data-ga-click="Header, go to notifications, icon:read" data-hotkey="g n">
+        <span class="mail-status all-read"></span>
+        <span class="octicon octicon-inbox"></span>
+</a>
+  </li>
+
+  <li class="header-nav-item">
+    <a class="header-nav-link tooltipped tooltipped-s" href="https://github.com/settings/profile" id="account_settings" aria-label="Settings" data-ga-click="Header, go to settings, icon:settings">
+      <span class="octicon octicon-gear"></span>
+    </a>
+  </li>
+
+  <li class="header-nav-item">
+    <form accept-charset="UTF-8" action="https://github.com/logout" class="logout-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="8YvoS3qB31XSz8YG2hTDaIxJx95TN3CUjl0Ssbl3puFEU9bNeknxeykpl3HpAk7ayzXi5Cw0U2JjM0i+x9UlZw=="></div>
+      <button class="header-nav-link sign-out-button tooltipped tooltipped-s" aria-label="Sign out" data-ga-click="Header, sign out, icon:logout">
+        <span class="octicon octicon-sign-out"></span>
+      </button>
+</form>  </li>
+
+</ul>
+
+
+    
+  </div>
+</div>
+
+      
+
+        
+
+
+      <div id="start-of-content" class="accessibility-aid"></div>
+          <div class="site" itemscope="" itemtype="http://schema.org/WebPage">
+    <div id="js-flash-container">
+      
+    </div>
+    <div class="pagehead repohead instapaper_ignore readability-menu">
+      <div class="container">
+        
+<ul class="pagehead-actions">
+
+    <li class="subscription">
+      <form accept-charset="UTF-8" action="https://github.com/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="zP0228340jWyOs6oIthoDoBh64UzG/zwVIj+d+soMgYQ1VaBwcYKvbBZ7oJ2Jwtx2oiw4Zyj3P58f9fSH43alw=="></div>  <input id="repository_id" name="repository_id" type="hidden" value="8393">
+
+    <div class="select-menu js-menu-container js-select-menu">
+      <a class="social-count js-social-count" href="https://github.com/thoughtbot/paperclip/watchers">
+        178
+      </a>
+      <a href="https://github.com/thoughtbot/paperclip/subscription" class="minibutton select-menu-button with-count js-menu-target" role="button" tabindex="0" aria-haspopup="true">
+        <span class="js-select-button">
+          <span class="octicon octicon-eye"></span>
+          Watch
+        </span>
+      </a>
+
+      <div class="select-menu-modal-holder">
+        <div class="select-menu-modal subscription-menu-modal js-menu-content" aria-hidden="true">
+          <div class="select-menu-header">
+            <span class="select-menu-title">Notifications</span>
+            <span class="octicon octicon-x js-menu-close" role="button" aria-label="Close"></span>
+          </div> <!-- /.select-menu-header -->
+
+          <div class="select-menu-list js-navigation-container" role="menu">
+
+            <div class="select-menu-item js-navigation-item selected" role="menuitem" tabindex="0">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <div class="select-menu-item-text">
+                <input checked="checked" id="do_included" name="do" type="radio" value="included">
+                <h4>Not watching</h4>
+                <span class="description">Be notified when participating or @mentioned.</span>
+                <span class="js-select-button-text hidden-select-button-text">
+                  <span class="octicon octicon-eye"></span>
+                  Watch
+                </span>
+              </div>
+            </div> <!-- /.select-menu-item -->
+
+            <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+              <span class="select-menu-item-icon octicon octicon octicon-check"></span>
+              <div class="select-menu-item-text">
+                <input id="do_subscribed" name="do" type="radio" value="subscribed">
+                <h4>Watching</h4>
+                <span class="description">Be notified of all conversations.</span>
+                <span class="js-select-button-text hidden-select-button-text">
+                  <span class="octicon octicon-eye"></span>
+                  Unwatch
+                </span>
+              </div>
+            </div> <!-- /.select-menu-item -->
+
+            <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <div class="select-menu-item-text">
+                <input id="do_ignore" name="do" type="radio" value="ignore">
+                <h4>Ignoring</h4>
+                <span class="description">Never be notified.</span>
+                <span class="js-select-button-text hidden-select-button-text">
+                  <span class="octicon octicon-mute"></span>
+                  Stop ignoring
+                </span>
+              </div>
+            </div> <!-- /.select-menu-item -->
+
+          </div> <!-- /.select-menu-list -->
+
+        </div> <!-- /.select-menu-modal -->
+      </div> <!-- /.select-menu-modal-holder -->
+    </div> <!-- /.select-menu -->
+
+</form>
+    </li>
+
+  <li>
+    
+  <div class="js-toggler-container js-social-container starring-container ">
+
+    <form accept-charset="UTF-8" action="https://github.com/thoughtbot/paperclip/unstar" class="js-toggler-form starred js-unstar-button" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="BrzgkmvGUG72x0hclH+zL/9nNdF2ndZmwPwlOPJtdOfjCBXIwSH22viYb2sgp8FtDCvZ2O0PFDu33IbR2d3sjg=="></div>
+      <button class="minibutton with-count js-toggler-target star-button" aria-label="Unstar this repository" title="Unstar thoughtbot/paperclip">
+        <span class="octicon octicon-star"></span>
+        Unstar
+      </button>
+        <a class="social-count js-social-count" href="https://github.com/thoughtbot/paperclip/stargazers">
+          6,332
+        </a>
+</form>
+    <form accept-charset="UTF-8" action="https://github.com/thoughtbot/paperclip/star" class="js-toggler-form unstarred js-star-button" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="NDwE1d3hJi2nV5NpxGTzMoznHGh3Logw3S12azuVJSO22ak9GA+mc/M8/Xhl/dbm/Od3XQCymox0zbv9hUZ8wg=="></div>
+      <button class="minibutton with-count js-toggler-target star-button" aria-label="Star this repository" title="Star thoughtbot/paperclip">
+        <span class="octicon octicon-star"></span>
+        Star
+      </button>
+        <a class="social-count js-social-count" href="https://github.com/thoughtbot/paperclip/stargazers">
+          6,332
+        </a>
+</form>  </div>
+
+  </li>
+
+
+        <li>
+          <a href="https://github.com/thoughtbot/paperclip/fork" class="minibutton with-count js-toggler-target fork-button tooltipped-n" title="Fork your own copy of thoughtbot/paperclip to your account" aria-label="Fork your own copy of thoughtbot/paperclip to your account" rel="facebox nofollow">
+            <span class="octicon octicon-repo-forked"></span>
+            Fork
+          </a>
+          <a href="https://github.com/thoughtbot/paperclip/network" class="social-count">1,407</a>
+        </li>
+
+</ul>
+
+        <h1 itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
+          <span class="mega-octicon octicon-repo"></span>
+          <span class="author"><a href="https://github.com/thoughtbot" class="url fn" itemprop="url" rel="author"><span itemprop="title">thoughtbot</span></a></span><!--
+       --><span class="path-divider">/</span><!--
+       --><strong><a href="./thoughtbot paperclip_files/thoughtbot paperclip.html" class="js-current-repository js-repo-home-link">paperclip</a></strong>
+
+          <span class="page-context-loader">
+            <img alt="" height="16" src="./thoughtbot paperclip_files/octocat-spinner-32.gif" width="16">
+          </span>
+
+        </h1>
+      </div><!-- /.container -->
+    </div><!-- /.repohead -->
+
+    <div class="container">
+      <div class="repository-with-sidebar repo-container new-discussion-timeline with-full-navigation">
+        <div class="repository-sidebar clearfix">
+            
+<div class="sunken-menu vertical-right repo-nav js-repo-nav js-repository-container-pjax js-octicon-loaders" data-issue-count-url="/thoughtbot/paperclip/issues/counts">
+  <div class="sunken-menu-contents">
+    <ul class="sunken-menu-group">
+      <li class="tooltipped tooltipped-w" aria-label="Code">
+        <a href="./thoughtbot paperclip_files/thoughtbot paperclip.html" aria-label="Code" class="selected js-selected-navigation-item sunken-menu-item" data-hotkey="g c" data-pjax="true" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /thoughtbot/paperclip">
+          <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
+          <img alt="" class="mini-loader" height="16" src="./thoughtbot paperclip_files/octocat-spinner-32.gif" width="16">
+</a>      </li>
+
+        <li class="tooltipped tooltipped-w" aria-label="Issues">
+          <a href="https://github.com/thoughtbot/paperclip/issues" aria-label="Issues" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /thoughtbot/paperclip/issues">
+            <span class="octicon octicon-issue-opened"></span> <span class="full-word">Issues</span>
+            <span class="counter">178</span>
+
+            <img alt="" class="mini-loader" height="16" src="./thoughtbot paperclip_files/octocat-spinner-32.gif" width="16">
+</a>        </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Pull Requests">
+        <a href="https://github.com/thoughtbot/paperclip/pulls" aria-label="Pull Requests" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-hotkey="g p" data-selected-links="repo_pulls /thoughtbot/paperclip/pulls">
+            <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull Requests</span>
+            <span class="counter">10</span>
+
+            <img alt="" class="mini-loader" height="16" src="./thoughtbot paperclip_files/octocat-spinner-32.gif" width="16">
+</a>      </li>
+
+
+        <li class="tooltipped tooltipped-w" aria-label="Wiki">
+          <a href="https://github.com/thoughtbot/paperclip/wiki" aria-label="Wiki" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-hotkey="g w" data-selected-links="repo_wiki /thoughtbot/paperclip/wiki">
+            <span class="octicon octicon-book"></span> <span class="full-word">Wiki</span>
+            <img alt="" class="mini-loader" height="16" src="./thoughtbot paperclip_files/octocat-spinner-32.gif" width="16">
+</a>        </li>
+    </ul>
+    <div class="sunken-menu-separator"></div>
+    <ul class="sunken-menu-group">
+
+      <li class="tooltipped tooltipped-w" aria-label="Pulse">
+        <a href="https://github.com/thoughtbot/paperclip/pulse/weekly" aria-label="Pulse" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="pulse /thoughtbot/paperclip/pulse/weekly">
+          <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span>
+          <img alt="" class="mini-loader" height="16" src="./thoughtbot paperclip_files/octocat-spinner-32.gif" width="16">
+</a>      </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Graphs">
+        <a href="https://github.com/thoughtbot/paperclip/graphs" aria-label="Graphs" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="repo_graphs repo_contributors /thoughtbot/paperclip/graphs">
+          <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span>
+          <img alt="" class="mini-loader" height="16" src="./thoughtbot paperclip_files/octocat-spinner-32.gif" width="16">
+</a>      </li>
+    </ul>
+
+
+  </div>
+</div>
+
+              <div class="only-with-full-nav">
+                
+  
+<div class="clone-url " data-protocol-type="http" data-url="/users/set_protocol?protocol_selector=http&amp;protocol_type=clone">
+  <h3><span class="text-emphasized">HTTPS</span> clone URL</h3>
+  <div class="input-group">
+    <input type="text" class="input-mini input-monospace js-url-field" value="https://github.com/thoughtbot/paperclip.git" readonly="readonly">
+    <span class="input-group-button">
+      <button aria-label="Copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="https://github.com/thoughtbot/paperclip.git" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+  
+<div class="clone-url open" data-protocol-type="ssh" data-url="/users/set_protocol?protocol_selector=ssh&amp;protocol_type=clone">
+  <h3><span class="text-emphasized">SSH</span> clone URL</h3>
+  <div class="input-group">
+    <input type="text" class="input-mini input-monospace js-url-field" value="git@github.com:thoughtbot/paperclip.git" readonly="readonly">
+    <span class="input-group-button">
+      <button aria-label="Copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="git@github.com:thoughtbot/paperclip.git" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+  
+<div class="clone-url " data-protocol-type="subversion" data-url="/users/set_protocol?protocol_selector=subversion&amp;protocol_type=clone">
+  <h3><span class="text-emphasized">Subversion</span> checkout URL</h3>
+  <div class="input-group">
+    <input type="text" class="input-mini input-monospace js-url-field" value="https://github.com/thoughtbot/paperclip" readonly="readonly">
+    <span class="input-group-button">
+      <button aria-label="Copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="https://github.com/thoughtbot/paperclip" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+
+<p class="clone-options">You can clone with
+      <a href="https://github.com/thoughtbot/paperclip#" class="js-clone-selector" data-protocol="http">HTTPS</a>,
+      <a href="https://github.com/thoughtbot/paperclip#" class="js-clone-selector" data-protocol="ssh">SSH</a>,
+      or <a href="https://github.com/thoughtbot/paperclip#" class="js-clone-selector" data-protocol="subversion">Subversion</a>.
+  <a href="https://help.github.com/articles/which-remote-url-should-i-use" class="help tooltipped tooltipped-n" aria-label="Get help on which URL is right for you.">
+    <span class="octicon octicon-question"></span>
+  </a>
+</p>
+
+
+
+                <a href="https://github.com/thoughtbot/paperclip/archive/master.zip" class="minibutton sidebar-button" aria-label="Download the contents of thoughtbot/paperclip as a zip file" title="Download the contents of thoughtbot/paperclip as a zip file" rel="nofollow">
+                  <span class="octicon octicon-cloud-download"></span>
+                  Download ZIP
+                </a>
+              </div>
+        </div><!-- /.repository-sidebar -->
+
+        <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container="">
+          
+<span id="js-show-full-navigation"></span>
+
+<div class="repository-meta js-details-container ">
+    <div class="repository-description">
+      <p>Easy file attachment management for ActiveRecord</p>
+    </div>
+
+    <div class="repository-website">
+      <p><a href="http://thoughtbot.com/open-source" rel="nofollow">http://thoughtbot.com/open-source</a></p>
+    </div>
+
+
+</div>
+
+<div class="overall-summary overall-summary-bottomless">
+
+  <div class="stats-switcher-viewport js-stats-switcher-viewport">
+    <div class="stats-switcher-wrapper">
+    <ul class="numbers-summary">
+      <li class="commits">
+        <a data-pjax="" href="https://github.com/thoughtbot/paperclip/commits/master">
+            <span class="octicon octicon-history"></span>
+            <span class="num text-emphasized">
+              1,557
+            </span>
+            commits
+        </a>
+      </li>
+      <li>
+        <a data-pjax="" href="https://github.com/thoughtbot/paperclip/branches">
+          <span class="octicon octicon-git-branch"></span>
+          <span class="num text-emphasized">
+            16
+          </span>
+          branches
+        </a>
+      </li>
+
+      <li>
+        <a data-pjax="" href="https://github.com/thoughtbot/paperclip/releases">
+          <span class="octicon octicon-tag"></span>
+          <span class="num text-emphasized">
+            82
+          </span>
+          releases
+        </a>
+      </li>
+
+      <li>
+        
+  <a href="https://github.com/thoughtbot/paperclip/graphs/contributors">
+    <span class="octicon octicon-organization"></span>
+    <span class="num text-emphasized">
+      266
+    </span>
+    contributors
+  </a>
+      </li>
+    </ul>
+
+      <div class="repository-lang-stats">
+        <ol class="repository-lang-stats-numbers">
+          <li>
+              <a href="https://github.com/thoughtbot/paperclip/search?l=ruby">
+                <span class="color-block language-color" style="background-color:#701516;"></span>
+                <span class="lang">Ruby</span>
+                <span class="percent">100%</span>
+              </a>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+  <div class="tooltipped tooltipped-s" aria-label="Show language statistics">
+    <a href="https://github.com/thoughtbot/paperclip#" class="repository-lang-stats-graph js-toggle-lang-stats" style="background-color:#701516">
+  <span class="language-color" style="width:100%; background-color:#701516;" itemprop="keywords">Ruby</span>
+    </a>
+  </div>
+
+
+
+<div class="file-navigation in-mid-page">
+  <a href="https://github.com/thoughtbot/paperclip/find/master" class="js-show-file-finder minibutton empty-icon tooltipped tooltipped-s right" data-pjax="" data-hotkey="t" aria-label="Quickly jump between files">
+    <span class="octicon octicon-list-unordered"></span>
+  </a>
+    <a href="https://github.com/thoughtbot/paperclip/compare" aria-label="Compare, review, create a pull request" class="minibutton primary tooltipped tooltipped-s left compare-button" data-pjax="">
+      <span class="octicon octicon-git-compare"></span>
+    </a>
+
+  
+<div class="select-menu js-menu-container js-select-menu left">
+  <span class="minibutton select-menu-button js-menu-target css-truncate" data-hotkey="w" data-master-branch="master" data-ref="master" title="master" role="button" aria-label="Switch branches or tags" tabindex="0" aria-haspopup="true">
+    <span class="octicon octicon-git-branch"></span>
+    <i>branch:</i>
+    <span class="js-select-button css-truncate-target">master</span>
+  </span>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax="" aria-hidden="true">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span class="select-menu-title">Switch branches/tags</span>
+        <span class="octicon octicon-x js-menu-close" role="button" aria-label="Close"></span>
+      </div> <!-- /.select-menu-header -->
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="https://github.com/thoughtbot/paperclip#" data-tab-filter="branches" class="js-select-menu-tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="https://github.com/thoughtbot/paperclip#" data-tab-filter="tags" class="js-select-menu-tab">Tags</a>
+            </li>
+          </ul>
+        </div><!-- /.select-menu-tabs -->
+      </div><!-- /.select-menu-filters -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/ap-s3-refactor" data-name="ap-s3-refactor" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="ap-s3-refactor">ap-s3-refactor</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/djcp-improve-regexes" data-name="djcp-improve-regexes" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="djcp-improve-regexes">djcp-improve-regexes</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/do-update-readme" data-name="do-update-readme" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="do-update-readme">do-update-readme</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/jy-branch" data-name="jy-branch" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="jy-branch">jy-branch</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item selected">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/master" data-name="master" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="master">master</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/ps-random-tempfile" data-name="ps-random-tempfile" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="ps-random-tempfile">ps-random-tempfile</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/raise-on-no-content-type-validation" data-name="raise-on-no-content-type-validation" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="raise-on-no-content-type-validation">raise-on-no-content-type-validation</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/simpler-gentler" data-name="simpler-gentler" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="simpler-gentler">simpler-gentler</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/style-migrations" data-name="style-migrations" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="style-migrations">style-migrations</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/travis-errors" data-name="travis-errors" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="travis-errors">travis-errors</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.7" data-name="v2.7" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.7">v2.7</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v3.1" data-name="v3.1" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v3.1">v3.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v3.2" data-name="v3.2" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v3.2">v3.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v3.5" data-name="v3.5" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v3.5">v3.5</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v3.6" data-name="v3.6" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v3.6">v3.6</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v4.0" data-name="v4.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v4.0">v4.0</a>
+            </div> <!-- /.select-menu-item -->
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div> <!-- /.select-menu-list -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v4.2.0" data-name="v4.2.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v4.2.0">v4.2.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v4.1.1" data-name="v4.1.1" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v4.1.1">v4.1.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v4.1.0" data-name="v4.1.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v4.1.0">v4.1.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v4.0.0" data-name="v4.0.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v4.0.0">v4.0.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v3.5.4" data-name="v3.5.4" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v3.5.4">v3.5.4</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v3.5.3" data-name="v3.5.3" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v3.5.3">v3.5.3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v3.5.2" data-name="v3.5.2" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v3.5.2">v3.5.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v3.5.1.1" data-name="v3.5.1.1" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v3.5.1.1">v3.5.1.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v3.5.1" data-name="v3.5.1" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v3.5.1">v3.5.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v3.5.0" data-name="v3.5.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v3.5.0">v3.5.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v3.4.2" data-name="v3.4.2" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v3.4.2">v3.4.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v3.4.1" data-name="v3.4.1" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v3.4.1">v3.4.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v3.4.0" data-name="v3.4.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v3.4.0">v3.4.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v3.3.1" data-name="v3.3.1" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v3.3.1">v3.3.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v3.3.0" data-name="v3.3.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v3.3.0">v3.3.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v3.2.1" data-name="v3.2.1" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v3.2.1">v3.2.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v3.2.0" data-name="v3.2.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v3.2.0">v3.2.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v3.1.4" data-name="v3.1.4" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v3.1.4">v3.1.4</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v3.1.3" data-name="v3.1.3" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v3.1.3">v3.1.3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v3.1.2" data-name="v3.1.2" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v3.1.2">v3.1.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v3.1.1" data-name="v3.1.1" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v3.1.1">v3.1.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v3.1.0" data-name="v3.1.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v3.1.0">v3.1.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v3.0.4" data-name="v3.0.4" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v3.0.4">v3.0.4</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v3.0.3" data-name="v3.0.3" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v3.0.3">v3.0.3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v3.0.2" data-name="v3.0.2" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v3.0.2">v3.0.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v3.0.1" data-name="v3.0.1" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v3.0.1">v3.0.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v3.0.0" data-name="v3.0.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v3.0.0">v3.0.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.8.0" data-name="v2.8.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.8.0">v2.8.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.7.5" data-name="v2.7.5" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.7.5">v2.7.5</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.7.4" data-name="v2.7.4" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.7.4">v2.7.4</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.7.2" data-name="v2.7.2" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.7.2">v2.7.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.7.1" data-name="v2.7.1" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.7.1">v2.7.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.7.0" data-name="v2.7.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.7.0">v2.7.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.6.0" data-name="v2.6.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.6.0">v2.6.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.5.2" data-name="v2.5.2" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.5.2">v2.5.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.5.1" data-name="v2.5.1" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.5.1">v2.5.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.5.0" data-name="v2.5.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.5.0">v2.5.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.4.5" data-name="v2.4.5" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.4.5">v2.4.5</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.4.4" data-name="v2.4.4" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.4.4">v2.4.4</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.4.3" data-name="v2.4.3" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.4.3">v2.4.3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.4.2" data-name="v2.4.2" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.4.2">v2.4.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.4.1" data-name="v2.4.1" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.4.1">v2.4.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.4.0" data-name="v2.4.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.4.0">v2.4.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.3.16" data-name="v2.3.16" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.3.16">v2.3.16</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.3.15" data-name="v2.3.15" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.3.15">v2.3.15</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.3.14" data-name="v2.3.14" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.3.14">v2.3.14</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.3.13" data-name="v2.3.13" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.3.13">v2.3.13</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.3.12" data-name="v2.3.12" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.3.12">v2.3.12</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.3.10" data-name="v2.3.10" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.3.10">v2.3.10</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.3.9" data-name="v2.3.9" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.3.9">v2.3.9</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.3.8" data-name="v2.3.8" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.3.8">v2.3.8</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.3.7" data-name="v2.3.7" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.3.7">v2.3.7</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.3.6" data-name="v2.3.6" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.3.6">v2.3.6</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.3.5" data-name="v2.3.5" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.3.5">v2.3.5</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.3.4" data-name="v2.3.4" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.3.4">v2.3.4</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.3.3" data-name="v2.3.3" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.3.3">v2.3.3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.3.2.beta2" data-name="v2.3.2.beta2" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.3.2.beta2">v2.3.2.beta2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.3.2" data-name="v2.3.2" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.3.2">v2.3.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.3.1.1" data-name="v2.3.1.1" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.3.1.1">v2.3.1.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.3.1" data-name="v2.3.1" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.3.1">v2.3.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.3.0" data-name="v2.3.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.3.0">v2.3.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.2.9.2" data-name="v2.2.9.2" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.2.9.2">v2.2.9.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.2.9.1" data-name="v2.2.9.1" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.2.9.1">v2.2.9.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.2.9" data-name="v2.2.9" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.2.9">v2.2.9</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.2.8" data-name="v2.2.8" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.2.8">v2.2.8</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.2.7" data-name="v2.2.7" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.2.7">v2.2.7</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.2.6" data-name="v2.2.6" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.2.6">v2.2.6</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.2.5" data-name="v2.2.5" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.2.5">v2.2.5</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.2.4" data-name="v2.2.4" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.2.4">v2.2.4</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.2.3" data-name="v2.2.3" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.2.3">v2.2.3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.2.2" data-name="v2.2.2" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.2.2">v2.2.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.2.1" data-name="v2.2.1" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.2.1">v2.2.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.2.0" data-name="v2.2.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.2.0">v2.2.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.1.5" data-name="v2.1.5" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.1.5">v2.1.5</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.1.4" data-name="v2.1.4" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.1.4">v2.1.4</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.1.3" data-name="v2.1.3" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.1.3">v2.1.3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.1.2" data-name="v2.1.2" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.1.2">v2.1.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.1.1" data-name="v2.1.1" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.1.1">v2.1.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.1.0" data-name="v2.1.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.1.0">v2.1.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.0.2" data-name="v2.0.2" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.0.2">v2.0.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.0.1" data-name="v2.0.1" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.0.1">v2.0.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="https://github.com/thoughtbot/paperclip/tree/v2.0.0" data-name="v2.0.0" data-skip-pjax="true" rel="nofollow" class="js-navigation-open select-menu-item-text css-truncate-target" title="v2.0.0">v2.0.0</a>
+            </div> <!-- /.select-menu-item -->
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div> <!-- /.select-menu-list -->
+
+    </div> <!-- /.select-menu-modal -->
+  </div> <!-- /.select-menu-modal-holder -->
+</div> <!-- /.select-menu -->
+
+
+
+  <div class="breadcrumb"><span class="repo-root js-repo-root"><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="./thoughtbot paperclip_files/thoughtbot paperclip.html" class="" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">paperclip</span></a></span></span><span class="separator"> / </span><form action="https://github.com/thoughtbot/paperclip/new/master" aria-label="Fork this project and create a new file" class="js-new-blob-form tooltipped tooltipped-e new-file-link" method="post"><span aria-label="Fork this project and create a new file" class="js-new-blob-submit octicon octicon-plus" data-test-id="create-new-git-file" role="button"></span></form></div>
+</div>
+
+
+
+  
+  <div class="commit commit-tease js-details-container">
+    <p class="commit-title ">
+        <a href="https://github.com/thoughtbot/paperclip/commit/3ec2599d13c1c4d6ab7c5bd291b8ff31e625915e" class="message" data-pjax="true" title="Refactor previous into its own matcher">Refactor previous into its own matcher</a>
+        
+    </p>
+    <div class="commit-meta">
+      <button aria-label="Copy SHA" class="js-zeroclipboard zeroclipboard-link" data-clipboard-text="3ec2599d13c1c4d6ab7c5bd291b8ff31e625915e" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+      <a href="https://github.com/thoughtbot/paperclip/commit/3ec2599d13c1c4d6ab7c5bd291b8ff31e625915e" class="sha-block" data-pjax="">latest commit <span class="sha">3ec2599d13</span></a>
+
+      <div class="authorship">
+        <img alt="Jon Yurek" class="avatar" data-user="4632" height="20" src="./thoughtbot paperclip_files/4632" width="20">
+        <span class="author-name"><a href="https://github.com/jyurek" rel="contributor">jyurek</a></span>
+        authored <time class="updated" datetime="2014-09-25T11:32:36-04:00" is="relative-time" title="Sep 25, 2014 4:32 PM GMT+01:00">a day ago</time>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="file-wrap">
+    <table class="files" data-pjax="">
+
+      <tbody class="" data-url="/thoughtbot/paperclip/file-list/master" data-deferred-content-error="Failed to load latest commit information.">
+
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="" class="spinner" height="16" src="./thoughtbot paperclip_files/octocat-spinner-32.gif" width="16">
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="https://github.com/thoughtbot/paperclip/tree/master/cucumber" class="js-directory-link" id="1441f19754335ca4638bfdf1aea00c6d-38a0cb46825a776f2ee704889a20ca7b7ce5fc8d" title="cucumber">cucumber</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target ">
+          <a href="https://github.com/thoughtbot/paperclip/commit/98b90bc47f012ab04aa9d0de9d475641cd5fbe83" class="message" data-pjax="true" title="shoulda macro and webrat step for testing paperclip on s3">shoulda macro and webrat step for testing paperclip on s3</a>
+        </span>
+      </td>
+      <td class="age">
+        <span class="css-truncate css-truncate-target"><time datetime="2009-08-24T18:37:03Z" is="time-ago" title="Aug 24, 2009 7:37 PM GMT+01:00">5 years ago</time></span>
+      </td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="" class="spinner" height="16" src="./thoughtbot paperclip_files/octocat-spinner-32.gif" width="16">
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="https://github.com/thoughtbot/paperclip/tree/master/features" class="js-directory-link" id="9f034b63948763d489f944319c2eb3de-1c4bcb7d51bf9023fbbf235bfae215a6514014ab" title="features">features</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target ">
+          <a href="https://github.com/thoughtbot/paperclip/commit/c8011b1f63c25870e336dcc8111764c5103de9b7" class="message" data-pjax="true" title="Re-add lib/paperclip_processors for custom processors.
+
+Also, add integration tests for custom processor definition and unit
+test for Paperclip.load_processor (thoughtbot/paperclip#1535).">Re-add lib/paperclip_processors for custom processors.</a>
+        </span>
+      </td>
+      <td class="age">
+        <span class="css-truncate css-truncate-target"><time datetime="2014-08-29T20:11:26Z" is="time-ago" title="Aug 29, 2014 9:11 PM GMT+01:00">28 days ago</time></span>
+      </td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="" class="spinner" height="16" src="./thoughtbot paperclip_files/octocat-spinner-32.gif" width="16">
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="https://github.com/thoughtbot/paperclip/tree/master/gemfiles" class="js-directory-link" id="ac46a8b5a40536c4171a5ebee5aca2d4-7532fb7b110a7e6ae813615fb19ee939f2ce0bb5" title="gemfiles">gemfiles</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target ">
+          <a href="https://github.com/thoughtbot/paperclip/commit/743e2e00dd99dd2360fbed005913d38378d8eae7" class="message" data-pjax="true" title="Changes to get rbx passing
+
+First off, sqlite3 needs to be exactly v1.3.8.
+Need to make sure both racc and rubysl are in the Gemfiles.
+RBX&#39;s File.join doesn&#39;t like nil at all.
+RBX also doesn&#39;t like to remove a constant that doesn&#39;t exist yet.">Changes to get rbx passing</a>
+        </span>
+      </td>
+      <td class="age">
+        <span class="css-truncate css-truncate-target"><time datetime="2014-03-11T17:44:18Z" is="time-ago" title="Mar 11, 2014 5:44 PM GMT">7 months ago</time></span>
+      </td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="" class="spinner" height="16" src="./thoughtbot paperclip_files/octocat-spinner-32.gif" width="16">
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="https://github.com/thoughtbot/paperclip/tree/master/lib" class="js-directory-link" id="e8acc63b1e238f3255c900eed37254b8-2530dfd33e0a938bf349016944d597a724eaa6fe" title="lib">lib</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target ">
+          <a href="https://github.com/thoughtbot/paperclip/commit/6ea7c26512434a93b598602fd6e959452a97969b" class="message" data-pjax="true" title="Pass options through to the underlying adapter.
+
+Column-specific options can be specified by using its name,
+for example:
+
+```
+t.attachment :avatar, created_at: { index: true }
+```">Pass options through to the underlying adapter.</a>
+        </span>
+      </td>
+      <td class="age">
+        <span class="css-truncate css-truncate-target"><time datetime="2014-09-25T13:30:27Z" is="time-ago" title="Sep 25, 2014 2:30 PM GMT+01:00">a day ago</time></span>
+      </td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="" class="spinner" height="16" src="./thoughtbot paperclip_files/octocat-spinner-32.gif" width="16">
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="https://github.com/thoughtbot/paperclip/tree/master/shoulda_macros" class="js-directory-link" id="ced7812e1c8d68881277e5755e962c81-6a3aff3a143c07d8f003e40870d790012ea73691" title="shoulda_macros">shoulda_macros</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target ">
+          <a href="https://github.com/thoughtbot/paperclip/commit/1f3a74678f459dc1b2d60efd49f3cfe4addc6f63" class="message" data-pjax="true" title="Convert all of the tests from test/unit to RSpec
+
+This is a big one.
+
+This change converts all of the existing tests from test/unit to RSpec.
+It&#39;s been a long time coming, and was specifically prompted by the
+inability of minitest to work with Appraisal across the various Rails
+versions. Instead of ironing out that headache, converting to RSpec was
+preferable (after initial probing).
+
+Many assertions are still assertions and are housed in the Assertions
+module, but they should be converted as they get touched. Similarly,
+since we&#39;re touching all the tests/specs, we convert all the hashes from
+1.8 syntax to 1.9 syntax.">Convert all of the tests from test/unit to RSpec</a>
+        </span>
+      </td>
+      <td class="age">
+        <span class="css-truncate css-truncate-target"><time datetime="2014-03-11T17:42:34Z" is="time-ago" title="Mar 11, 2014 5:42 PM GMT">7 months ago</time></span>
+      </td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-directory"></span>
+        <img alt="" class="spinner" height="16" src="./thoughtbot paperclip_files/octocat-spinner-32.gif" width="16">
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="https://github.com/thoughtbot/paperclip/tree/master/spec" class="js-directory-link" id="b979c2934ac0b4ba3f08dabfdd1b2299-44512e626677d895a977d85794c1d380653ed236" title="spec">spec</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target ">
+          <a href="https://github.com/thoughtbot/paperclip/commit/3ec2599d13c1c4d6ab7c5bd291b8ff31e625915e" class="message" data-pjax="true" title="Refactor previous into its own matcher">Refactor previous into its own matcher</a>
+        </span>
+      </td>
+      <td class="age">
+        <span class="css-truncate css-truncate-target"><time datetime="2014-09-25T15:32:36Z" is="time-ago" title="Sep 25, 2014 4:32 PM GMT+01:00">a day ago</time></span>
+      </td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="" class="spinner" height="16" src="./thoughtbot paperclip_files/octocat-spinner-32.gif" width="16">
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="https://github.com/thoughtbot/paperclip/blob/master/.gitignore" class="js-directory-link" id="a084b794bc0759e7a6b77810e01874f2-36dfb6bb598b21d248758c8acda6176b1f996737" title=".gitignore">.gitignore</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target ">
+          <a href="https://github.com/thoughtbot/paperclip/commit/1f3a74678f459dc1b2d60efd49f3cfe4addc6f63" class="message" data-pjax="true" title="Convert all of the tests from test/unit to RSpec
+
+This is a big one.
+
+This change converts all of the existing tests from test/unit to RSpec.
+It&#39;s been a long time coming, and was specifically prompted by the
+inability of minitest to work with Appraisal across the various Rails
+versions. Instead of ironing out that headache, converting to RSpec was
+preferable (after initial probing).
+
+Many assertions are still assertions and are housed in the Assertions
+module, but they should be converted as they get touched. Similarly,
+since we&#39;re touching all the tests/specs, we convert all the hashes from
+1.8 syntax to 1.9 syntax.">Convert all of the tests from test/unit to RSpec</a>
+        </span>
+      </td>
+      <td class="age">
+        <span class="css-truncate css-truncate-target"><time datetime="2014-03-11T17:42:34Z" is="time-ago" title="Mar 11, 2014 5:42 PM GMT">7 months ago</time></span>
+      </td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="" class="spinner" height="16" src="./thoughtbot paperclip_files/octocat-spinner-32.gif" width="16">
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="https://github.com/thoughtbot/paperclip/blob/master/.travis.yml" class="js-directory-link" id="354f30a63fb0907d4ad57269548329e3-c52e29cdcbdc5ff61f59494cfb86e57ef7908770" title=".travis.yml">.travis.yml</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target ">
+          <a href="https://github.com/thoughtbot/paperclip/commit/43eb9a36deb09ce5655028a1061578dbf0268a5d" class="message" data-pjax="true" title="Update Travis build configuration
+
+* Change `rbx` to `rbx-2`
+* Mark `rbx-2` as allow-failure again">Update Travis build configuration</a>
+        </span>
+      </td>
+      <td class="age">
+        <span class="css-truncate css-truncate-target"><time datetime="2014-05-16T14:54:20Z" is="time-ago" title="May 16, 2014 3:54 PM GMT+01:00">4 months ago</time></span>
+      </td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="" class="spinner" height="16" src="./thoughtbot paperclip_files/octocat-spinner-32.gif" width="16">
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="https://github.com/thoughtbot/paperclip/blob/master/Appraisals" class="js-directory-link" id="3bb7346aca79d8142e16e61372bd04dc-e612af4601f838fb072deda7bc2f7364190d7d42" title="Appraisals">Appraisals</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target ">
+          <a href="https://github.com/thoughtbot/paperclip/commit/1f3a74678f459dc1b2d60efd49f3cfe4addc6f63" class="message" data-pjax="true" title="Convert all of the tests from test/unit to RSpec
+
+This is a big one.
+
+This change converts all of the existing tests from test/unit to RSpec.
+It&#39;s been a long time coming, and was specifically prompted by the
+inability of minitest to work with Appraisal across the various Rails
+versions. Instead of ironing out that headache, converting to RSpec was
+preferable (after initial probing).
+
+Many assertions are still assertions and are housed in the Assertions
+module, but they should be converted as they get touched. Similarly,
+since we&#39;re touching all the tests/specs, we convert all the hashes from
+1.8 syntax to 1.9 syntax.">Convert all of the tests from test/unit to RSpec</a>
+        </span>
+      </td>
+      <td class="age">
+        <span class="css-truncate css-truncate-target"><time datetime="2014-03-11T17:42:34Z" is="time-ago" title="Mar 11, 2014 5:42 PM GMT">7 months ago</time></span>
+      </td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="" class="spinner" height="16" src="./thoughtbot paperclip_files/octocat-spinner-32.gif" width="16">
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="https://github.com/thoughtbot/paperclip/blob/master/CONTRIBUTING.md" class="js-directory-link" id="6a3371457528722a734f3c51d9238c13-f1f535f4e8526283360ee0a1b00b260bd3a05e81" title="CONTRIBUTING.md">CONTRIBUTING.md</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target ">
+          <a href="https://github.com/thoughtbot/paperclip/commit/187e63a08e04d92a60a8bdc53d167b3c0fe2b801" class="message" data-pjax="true" title="Remove typo in contributing guidelines
+
+Remove extraneous &#39;not&#39;.">Remove typo in contributing guidelines</a>
+        </span>
+      </td>
+      <td class="age">
+        <span class="css-truncate css-truncate-target"><time datetime="2014-05-15T05:24:17Z" is="time-ago" title="May 15, 2014 6:24 AM GMT+01:00">5 months ago</time></span>
+      </td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="" class="spinner" height="16" src="./thoughtbot paperclip_files/octocat-spinner-32.gif" width="16">
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="https://github.com/thoughtbot/paperclip/blob/master/Gemfile" class="js-directory-link" id="8b7db4d5cc4b8f6dc8feb7030baa2478-dfbf25f8f8b8bc2a32f5dc12b1fc1c21f9cd52b2" title="Gemfile">Gemfile</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target ">
+          <a href="https://github.com/thoughtbot/paperclip/commit/9b2dd49599897121958fe919ee84e7494d18bffa" class="message" data-pjax="true" title="Move Timecop gem from Gemfile into gemspec">Move Timecop gem from Gemfile into gemspec</a>
+        </span>
+      </td>
+      <td class="age">
+        <span class="css-truncate css-truncate-target"><time datetime="2014-05-15T03:12:49Z" is="time-ago" title="May 15, 2014 4:12 AM GMT+01:00">5 months ago</time></span>
+      </td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="" class="spinner" height="16" src="./thoughtbot paperclip_files/octocat-spinner-32.gif" width="16">
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="https://github.com/thoughtbot/paperclip/blob/master/LICENSE" class="js-directory-link" id="9879d6db96fd29134fc802214163b95a-df9cf366b401c6fe2d7b57fb9093b62827b71b70" title="LICENSE">LICENSE</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target ">
+          <a href="https://github.com/thoughtbot/paperclip/commit/52840dcd9d87708eccded7477221c5420761e085" class="message" data-pjax="true" title="Update copyright to 2014">Update copyright to 2014</a>
+        </span>
+      </td>
+      <td class="age">
+        <span class="css-truncate css-truncate-target"><time datetime="2014-01-27T09:10:31Z" is="time-ago" title="Jan 27, 2014 9:10 AM GMT">8 months ago</time></span>
+      </td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="" class="spinner" height="16" src="./thoughtbot paperclip_files/octocat-spinner-32.gif" width="16">
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="https://github.com/thoughtbot/paperclip/blob/master/NEWS" class="js-directory-link" id="ff4e2dc4962dc25a1512353299992c8d-db25e3b89254841f916928f1bd25766e63be70f3" title="NEWS">NEWS</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target ">
+          <a href="https://github.com/thoughtbot/paperclip/commit/d8701fb54933de38e3122b2ceced1101a663301f" class="message" data-pjax="true" title="Updated NEWS for v4.2.0">Updated NEWS for v4.2.0</a>
+        </span>
+      </td>
+      <td class="age">
+        <span class="css-truncate css-truncate-target"><time datetime="2014-07-08T18:11:37Z" is="time-ago" title="Jul 8, 2014 7:11 PM GMT+01:00">3 months ago</time></span>
+      </td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="" class="spinner" height="16" src="./thoughtbot paperclip_files/octocat-spinner-32.gif" width="16">
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="https://github.com/thoughtbot/paperclip/blob/master/README.md" class="js-directory-link" id="04c6e90faac2675aa89e2176d2eec7d8-d7b680d0c62c86d2283ad063084cdbf35e276c0f" title="README.md">README.md</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target ">
+          <a href="https://github.com/thoughtbot/paperclip/commit/30d0efb4ca7c09efec6702fb16130eee13707a31" class="message" data-pjax="true" title="Merge pull request #1654 from maximeg/patch-1
+
+Fix: Typo in README">Merge pull request</a> <a href="https://github.com/thoughtbot/paperclip/pull/1654" class="issue-link" title="Fix: Typo in README">#1654</a> <a href="https://github.com/thoughtbot/paperclip/commit/30d0efb4ca7c09efec6702fb16130eee13707a31" class="message" data-pjax="true" title="Merge pull request #1654 from maximeg/patch-1
+
+Fix: Typo in README">from maximeg/patch-1</a>
+        </span>
+      </td>
+      <td class="age">
+        <span class="css-truncate css-truncate-target"><time datetime="2014-09-25T13:26:46Z" is="time-ago" title="Sep 25, 2014 2:26 PM GMT+01:00">a day ago</time></span>
+      </td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="" class="spinner" height="16" src="./thoughtbot paperclip_files/octocat-spinner-32.gif" width="16">
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="https://github.com/thoughtbot/paperclip/blob/master/RUNNING_TESTS.md" class="js-directory-link" id="bded381072db3df0e34d848173d38105-7ba2156be1b579c88ef51cc930f8a19cb7e67831" title="RUNNING_TESTS.md">RUNNING_TESTS.md</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target ">
+          <a href="https://github.com/thoughtbot/paperclip/commit/4326a3d05df1f34b95b21417ca428b73bce092a6" class="message" data-pjax="true" title="Update documentation regarding running test">Update documentation regarding running test</a>
+        </span>
+      </td>
+      <td class="age">
+        <span class="css-truncate css-truncate-target"><time datetime="2012-04-25T17:11:14Z" is="time-ago" title="Apr 25, 2012 6:11 PM GMT+01:00">2 years ago</time></span>
+      </td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="" class="spinner" height="16" src="./thoughtbot paperclip_files/octocat-spinner-32.gif" width="16">
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="https://github.com/thoughtbot/paperclip/blob/master/Rakefile" class="js-directory-link" id="52c976fc38ed2b4e3b1192f8a8e24cff-b20cc6c882c91374dbc65586746c1b1ad631463a" title="Rakefile">Rakefile</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target ">
+          <a href="https://github.com/thoughtbot/paperclip/commit/743e2e00dd99dd2360fbed005913d38378d8eae7" class="message" data-pjax="true" title="Changes to get rbx passing
+
+First off, sqlite3 needs to be exactly v1.3.8.
+Need to make sure both racc and rubysl are in the Gemfiles.
+RBX&#39;s File.join doesn&#39;t like nil at all.
+RBX also doesn&#39;t like to remove a constant that doesn&#39;t exist yet.">Changes to get rbx passing</a>
+        </span>
+      </td>
+      <td class="age">
+        <span class="css-truncate css-truncate-target"><time datetime="2014-03-11T17:44:18Z" is="time-ago" title="Mar 11, 2014 5:44 PM GMT">7 months ago</time></span>
+      </td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="" class="spinner" height="16" src="./thoughtbot paperclip_files/octocat-spinner-32.gif" width="16">
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="https://github.com/thoughtbot/paperclip/blob/master/UPGRADING" class="js-directory-link" id="7748eb3bfdd3bf962553f6f9f2723c45-ba30d45a48433424529a391bba3495be88c13b40" title="UPGRADING">UPGRADING</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target ">
+          <a href="https://github.com/thoughtbot/paperclip/commit/b3a63edb1705f75673fdb41f60691b0cc5065697" class="message" data-pjax="true" title="Add Upgrading note">Add Upgrading note</a>
+        </span>
+      </td>
+      <td class="age">
+        <span class="css-truncate css-truncate-target"><time datetime="2012-03-23T22:31:59Z" is="time-ago" title="Mar 23, 2012 10:31 PM GMT">3 years ago</time></span>
+      </td>
+    </tr>
+    <tr>
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="" class="spinner" height="16" src="./thoughtbot paperclip_files/octocat-spinner-32.gif" width="16">
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="https://github.com/thoughtbot/paperclip/blob/master/paperclip.gemspec" class="js-directory-link" id="97bdf5a528539d17998d2f825cea1109-ed6a0d429e5279fd61b4771f7ffa9272bf3e5424" title="paperclip.gemspec">paperclip.gemspec</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target ">
+          <a href="https://github.com/thoughtbot/paperclip/commit/9b2dd49599897121958fe919ee84e7494d18bffa" class="message" data-pjax="true" title="Move Timecop gem from Gemfile into gemspec">Move Timecop gem from Gemfile into gemspec</a>
+        </span>
+      </td>
+      <td class="age">
+        <span class="css-truncate css-truncate-target"><time datetime="2014-05-15T03:12:49Z" is="time-ago" title="May 15, 2014 4:12 AM GMT+01:00">5 months ago</time></span>
+      </td>
+    </tr>
+</tbody>
+
+    </table>
+  </div>
+
+
+  <div id="readme" class="boxed-group flush clearfix announce instapaper_body md">
+    <h3>
+      <span class="octicon octicon-book"></span>
+      README.md
+    </h3>
+
+    <article class="markdown-body entry-content" itemprop="mainContentOfPage"><h1>
+<a name="user-content-paperclip" class="anchor" href="https://github.com/thoughtbot/paperclip#paperclip" aria-hidden="true"><span class="octicon octicon-link"></span></a>Paperclip</h1>
+
+<p><a href="http://travis-ci.org/thoughtbot/paperclip"><img src="./thoughtbot paperclip_files/68747470733a2f2f7365637572652e7472617669732d63692e6f72672f74686f75676874626f742f7061706572636c69702e706e673f6272616e63683d6d6173746572" alt="Build Status" data-canonical-src="https://secure.travis-ci.org/thoughtbot/paperclip.png?branch=master" style="max-width:100%;"></a> <a href="https://gemnasium.com/thoughtbot/paperclip"><img src="./thoughtbot paperclip_files/68747470733a2f2f67656d6e617369756d2e636f6d2f74686f75676874626f742f7061706572636c69702e706e673f747261766973" alt="Dependency Status" data-canonical-src="https://gemnasium.com/thoughtbot/paperclip.png?travis" style="max-width:100%;"></a> <a href="https://codeclimate.com/github/thoughtbot/paperclip"><img src="./thoughtbot paperclip_files/68747470733a2f2f636f6465636c696d6174652e636f6d2f6769746875622f74686f75676874626f742f7061706572636c69702e706e67" alt="Code Climate" data-canonical-src="https://codeclimate.com/github/thoughtbot/paperclip.png" style="max-width:100%;"></a> <a href="http://inch-ci.org/github/thoughtbot/paperclip"><img src="./thoughtbot paperclip_files/687474703a2f2f696e63682d63692e6f72672f6769746875622f74686f75676874626f742f7061706572636c69702e706e67" alt="Inline docs" data-canonical-src="http://inch-ci.org/github/thoughtbot/paperclip.png" style="max-width:100%;"></a> <a href="https://hakiri.io/github/thoughtbot/paperclip/master"><img src="./thoughtbot paperclip_files/68747470733a2f2f68616b6972692e696f2f6769746875622f74686f75676874626f742f7061706572636c69702f6d61737465722e737667" alt="Security" data-canonical-src="https://hakiri.io/github/thoughtbot/paperclip/master.svg" style="max-width:100%;"></a></p>
+
+<p>Paperclip is intended as an easy file attachment library for Active Record. The
+intent behind it was to keep setup as easy as possible and to treat files as
+much like other attributes as possible. This means they aren't saved to their
+final locations on disk, nor are they deleted if set to nil, until
+ActiveRecord::Base#save is called. It manages validations based on size and
+presence, if required. It can transform its assigned image into thumbnails if
+needed, and the prerequisites are as simple as installing ImageMagick (which,
+for most modern Unix-based systems, is as easy as installing the right
+packages). Attached files are saved to the filesystem and referenced in the
+browser by an easily understandable specification, which has sensible and
+useful defaults.</p>
+
+<p>See the documentation for <code>has_attached_file</code> in <a href="http://rubydoc.info/gems/paperclip/Paperclip/ClassMethods"><code>Paperclip::ClassMethods</code></a> for
+more detailed options.</p>
+
+<p>The complete <a href="http://rdoc.info/gems/paperclip">RDoc</a> is online.</p>
+
+<h2>
+<a name="user-content-requirements" class="anchor" href="https://github.com/thoughtbot/paperclip#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h2>
+
+<h3>
+<a name="user-content-ruby-and-rails" class="anchor" href="https://github.com/thoughtbot/paperclip#ruby-and-rails" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ruby and Rails</h3>
+
+<p>Paperclip now requires Ruby version <strong>&gt;= 1.9.2</strong> and Rails version <strong>&gt;= 3.0</strong> (Only if you're going to use Paperclip with Ruby on Rails.)</p>
+
+<p>If you're still on Ruby 1.8.7 or Ruby on Rails 2.3.x, you can still use Paperclip 2.7.x with your project. Also, everything in this README might not apply to your version of Paperclip, and you should read <a href="http://rubydoc.info/gems/paperclip/2.7.0">the README for version 2.7</a> instead.</p>
+
+<h3>
+<a name="user-content-image-processor" class="anchor" href="https://github.com/thoughtbot/paperclip#image-processor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Image Processor</h3>
+
+<p><a href="http://www.imagemagick.org/">ImageMagick</a> must be installed and Paperclip must have access to it. To ensure
+that it does, on your command line, run <code>which convert</code> (one of the ImageMagick
+utilities). This will give you the path where that utility is installed. For
+example, it might return <code>/usr/local/bin/convert</code>.</p>
+
+<p>Then, in your environment config file, let Paperclip know to look there by adding that
+directory to its path.</p>
+
+<p>In development mode, you might add this line to <code>config/environments/development.rb)</code>:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="no">Paperclip</span><span class="o">.</span><span class="n">options</span><span class="o">[</span><span class="ss">:command_path</span><span class="o">]</span> <span class="o">=</span> <span class="s2">"/usr/local/bin/"</span>
+</pre></div>
+
+<p>If you're on Mac OS X, you'll want to run the following with Homebrew:</p>
+
+<pre><code>brew install imagemagick
+</code></pre>
+
+<p>If you are dealing with pdf uploads or running the test suite, you'll also need
+GhostScript to be installed. On Mac OS X, you can also install that using Homebrew:</p>
+
+<pre><code>brew install gs
+</code></pre>
+
+<h3>
+<a name="user-content-file-command" class="anchor" href="https://github.com/thoughtbot/paperclip#file-command" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+<code>file</code> command</h3>
+
+<p>The Unix <a href="http://en.wikipedia.org/wiki/File_(command)"><code>file</code> command</a> is required for content type checking.
+This utility isn't available in Windows, but comes bundled with Ruby <a href="https://github.com/oneclick/rubyinstaller/wiki/Development-Kit">Devkit</a>, 
+so Windows users must make sure that the devkit is installed and added to system <code>PATH</code>.</p>
+
+<h2>
+<a name="user-content-installation" class="anchor" href="https://github.com/thoughtbot/paperclip#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Paperclip is distributed as a gem, which is how it should be used in your app.</p>
+
+<p>Include the gem in your Gemfile:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="n">gem</span> <span class="s2">"paperclip"</span><span class="p">,</span> <span class="s2">"~&gt; 4.2"</span>
+</pre></div>
+
+<p>If you're still using Rails 2.3.x, you should do this instead:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="n">gem</span> <span class="s2">"paperclip"</span><span class="p">,</span> <span class="s2">"~&gt; 2.7"</span>
+</pre></div>
+
+<p>Or, if you want to get the latest, you can get master from the main paperclip repository:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="n">gem</span> <span class="s2">"paperclip"</span><span class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s2">"git://github.com/thoughtbot/paperclip.git"</span>
+</pre></div>
+
+<p>If you're trying to use features that don't seem to be in the latest released gem, but are
+mentioned in this README, then you probably need to specify the master branch if you want to
+use them. This README is probably ahead of the latest released version, if you're reading it
+on GitHub.</p>
+
+<p>For Non-Rails usage:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="k">class</span> <span class="nc">ModuleName</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+  <span class="kp">include</span> <span class="no">Paperclip</span><span class="o">::</span><span class="no">Glue</span>
+  <span class="o">.</span><span class="n">.</span><span class="o">.</span>
+<span class="k">end</span>
+</pre></div>
+
+<h2>
+<a name="user-content-quick-start" class="anchor" href="https://github.com/thoughtbot/paperclip#quick-start" aria-hidden="true"><span class="octicon octicon-link"></span></a>Quick Start</h2>
+
+<h3>
+<a name="user-content-models" class="anchor" href="https://github.com/thoughtbot/paperclip#models" aria-hidden="true"><span class="octicon octicon-link"></span></a>Models</h3>
+
+<p><strong>Rails 3</strong></p>
+
+<div class="highlight highlight-ruby"><pre><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+  <span class="n">attr_accessible</span> <span class="ss">:avatar</span>
+  <span class="n">has_attached_file</span> <span class="ss">:avatar</span><span class="p">,</span> <span class="ss">:styles</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="ss">:medium</span> <span class="o">=&gt;</span> <span class="s2">"300x300&gt;"</span><span class="p">,</span> <span class="ss">:thumb</span> <span class="o">=&gt;</span> <span class="s2">"100x100&gt;"</span> <span class="p">},</span> <span class="ss">:default_url</span> <span class="o">=&gt;</span> <span class="s2">"/images/:style/missing.png"</span>
+  <span class="n">validates_attachment_content_type</span> <span class="ss">:avatar</span><span class="p">,</span> <span class="ss">:content_type</span> <span class="o">=&gt;</span> <span class="sr">/\Aimage\/.*\Z/</span>
+<span class="k">end</span>
+</pre></div>
+
+<p><strong>Rails 4</strong></p>
+
+<div class="highlight highlight-ruby"><pre><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+  <span class="n">has_attached_file</span> <span class="ss">:avatar</span><span class="p">,</span> <span class="ss">:styles</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="ss">:medium</span> <span class="o">=&gt;</span> <span class="s2">"300x300&gt;"</span><span class="p">,</span> <span class="ss">:thumb</span> <span class="o">=&gt;</span> <span class="s2">"100x100&gt;"</span> <span class="p">},</span> <span class="ss">:default_url</span> <span class="o">=&gt;</span> <span class="s2">"/images/:style/missing.png"</span>
+  <span class="n">validates_attachment_content_type</span> <span class="ss">:avatar</span><span class="p">,</span> <span class="ss">:content_type</span> <span class="o">=&gt;</span> <span class="sr">/\Aimage\/.*\Z/</span>
+<span class="k">end</span>
+</pre></div>
+
+<h3>
+<a name="user-content-migrations" class="anchor" href="https://github.com/thoughtbot/paperclip#migrations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Migrations</h3>
+
+<div class="highlight highlight-ruby"><pre><span class="k">class</span> <span class="nc">AddAvatarColumnsToUsers</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Migration</span>
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">up</span>
+    <span class="n">add_attachment</span> <span class="ss">:users</span><span class="p">,</span> <span class="ss">:avatar</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">down</span>
+    <span class="n">remove_attachment</span> <span class="ss">:users</span><span class="p">,</span> <span class="ss">:avatar</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+<p>(Or you can use migration generator: <code>rails generate paperclip user avatar</code>)</p>
+
+<h3>
+<a name="user-content-edit-and-new-views" class="anchor" href="https://github.com/thoughtbot/paperclip#edit-and-new-views" aria-hidden="true"><span class="octicon octicon-link"></span></a>Edit and New Views</h3>
+
+<div class="highlight highlight-erb"><pre><span class="cp">&lt;%=</span> <span class="n">form_for</span> <span class="vi">@user</span><span class="p">,</span> <span class="ss">:url</span> <span class="o">=&gt;</span> <span class="n">users_path</span><span class="p">,</span> <span class="ss">:html</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="ss">:multipart</span> <span class="o">=&gt;</span> <span class="kp">true</span> <span class="p">}</span> <span class="k">do</span> <span class="o">|</span><span class="n">form</span><span class="o">|</span> <span class="cp">%&gt;</span><span class="x"></span>
+<span class="x">  </span><span class="cp">&lt;%=</span> <span class="n">form</span><span class="o">.</span><span class="n">file_field</span> <span class="ss">:avatar</span> <span class="cp">%&gt;</span><span class="x"></span>
+<span class="cp">&lt;%</span> <span class="k">end</span> <span class="cp">%&gt;</span><span class="x"></span>
+</pre></div>
+
+<h3>
+<a name="user-content-controller" class="anchor" href="https://github.com/thoughtbot/paperclip#controller" aria-hidden="true"><span class="octicon octicon-link"></span></a>Controller</h3>
+
+<p><strong>Rails 3</strong></p>
+
+<div class="highlight highlight-ruby"><pre><span class="k">def</span> <span class="nf">create</span>
+  <span class="vi">@user</span> <span class="o">=</span> <span class="no">User</span><span class="o">.</span><span class="n">create</span><span class="p">(</span> <span class="n">params</span><span class="o">[</span><span class="ss">:user</span><span class="o">]</span> <span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+<p><strong>Rails 4</strong></p>
+
+<div class="highlight highlight-ruby"><pre><span class="k">def</span> <span class="nf">create</span>
+  <span class="vi">@user</span> <span class="o">=</span> <span class="no">User</span><span class="o">.</span><span class="n">create</span><span class="p">(</span> <span class="n">user_params</span> <span class="p">)</span>
+<span class="k">end</span>
+
+<span class="kp">private</span>
+
+<span class="c1"># Use strong_parameters for attribute whitelisting</span>
+<span class="c1"># Be sure to update your create() and update() controller methods.</span>
+
+<span class="k">def</span> <span class="nf">user_params</span>
+  <span class="n">params</span><span class="o">.</span><span class="n">require</span><span class="p">(</span><span class="ss">:user</span><span class="p">)</span><span class="o">.</span><span class="n">permit</span><span class="p">(</span><span class="ss">:avatar</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+<h3>
+<a name="user-content-show-view" class="anchor" href="https://github.com/thoughtbot/paperclip#show-view" aria-hidden="true"><span class="octicon octicon-link"></span></a>Show View</h3>
+
+<div class="highlight highlight-erb"><pre><span class="cp">&lt;%=</span> <span class="n">image_tag</span> <span class="vi">@user</span><span class="o">.</span><span class="n">avatar</span><span class="o">.</span><span class="n">url</span> <span class="cp">%&gt;</span><span class="x"></span>
+<span class="cp">&lt;%=</span> <span class="n">image_tag</span> <span class="vi">@user</span><span class="o">.</span><span class="n">avatar</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="ss">:medium</span><span class="p">)</span> <span class="cp">%&gt;</span><span class="x"></span>
+<span class="cp">&lt;%=</span> <span class="n">image_tag</span> <span class="vi">@user</span><span class="o">.</span><span class="n">avatar</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="ss">:thumb</span><span class="p">)</span> <span class="cp">%&gt;</span><span class="x"></span>
+</pre></div>
+
+<h3>
+<a name="user-content-deleting-an-attachment" class="anchor" href="https://github.com/thoughtbot/paperclip#deleting-an-attachment" aria-hidden="true"><span class="octicon octicon-link"></span></a>Deleting an Attachment</h3>
+
+<p>Set the attribute to <code>nil</code> and save.</p>
+
+<div class="highlight highlight-ruby"><pre><span class="vi">@user</span><span class="o">.</span><span class="n">avatar</span> <span class="o">=</span> <span class="kp">nil</span>
+<span class="vi">@user</span><span class="o">.</span><span class="n">save</span>
+</pre></div>
+
+<h2>
+<a name="user-content-usage" class="anchor" href="https://github.com/thoughtbot/paperclip#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>The basics of paperclip are quite simple: Declare that your model has an
+attachment with the <code>has_attached_file</code> method, and give it a name.</p>
+
+<p>Paperclip will wrap up to four attributes (all prefixed with that attachment's name,
+so you can have multiple attachments per model if you wish) and give them a
+friendly front end. These attributes are:</p>
+
+<ul class="task-list">
+<li><code>&lt;attachment&gt;_file_name</code></li>
+<li><code>&lt;attachment&gt;_file_size</code></li>
+<li><code>&lt;attachment&gt;_content_type</code></li>
+<li><code>&lt;attachment&gt;_updated_at</code></li>
+</ul><p>By default, only <code>&lt;attachment&gt;_file_name</code> is required for paperclip to operate.
+You'll need to add <code>&lt;attachment&gt;_content_type</code> in case you want to use content type
+validation.</p>
+
+<p>More information about the options to <code>has_attached_file</code> is available in the
+documentation of <a href="http://rubydoc.info/gems/paperclip/Paperclip/ClassMethods"><code>Paperclip::ClassMethods</code></a>.</p>
+
+<h2>
+<a name="user-content-validations" class="anchor" href="https://github.com/thoughtbot/paperclip#validations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Validations</h2>
+
+<p>For validations, Paperclip introduces several validators to validate your attachment:</p>
+
+<ul class="task-list">
+<li><code>AttachmentContentTypeValidator</code></li>
+<li><code>AttachmentPresenceValidator</code></li>
+<li><code>AttachmentSizeValidator</code></li>
+</ul><p>Example Usage:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="n">validates</span> <span class="ss">:avatar</span><span class="p">,</span> <span class="ss">:attachment_presence</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+<span class="n">validates_with</span> <span class="no">AttachmentPresenceValidator</span><span class="p">,</span> <span class="ss">:attributes</span> <span class="o">=&gt;</span> <span class="ss">:avatar</span>
+<span class="n">validates_with</span> <span class="no">AttachmentSizeValidator</span><span class="p">,</span> <span class="ss">:attributes</span> <span class="o">=&gt;</span> <span class="ss">:avatar</span><span class="p">,</span> <span class="ss">:less_than</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="o">.</span><span class="n">megabytes</span>
+
+</pre></div>
+
+<p>Validators can also be defined using the old helper style:</p>
+
+<ul class="task-list">
+<li><code>validates_attachment_presence</code></li>
+<li><code>validates_attachment_content_type</code></li>
+<li><code>validates_attachment_size</code></li>
+</ul><p>Example Usage:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="n">validates_attachment_presence</span> <span class="ss">:avatar</span>
+</pre></div>
+
+<p>Lastly, you can also define multiple validations on a single attachment using <code>validates_attachment</code>:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="n">validates_attachment</span> <span class="ss">:avatar</span><span class="p">,</span> <span class="ss">:presence</span> <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">,</span>
+  <span class="ss">:content_type</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="ss">:content_type</span> <span class="o">=&gt;</span> <span class="s2">"image/jpeg"</span> <span class="p">},</span>
+  <span class="ss">:size</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="ss">:in</span> <span class="o">=&gt;</span> <span class="mi">0</span><span class="o">.</span><span class="n">.</span><span class="mi">10</span><span class="o">.</span><span class="n">kilobytes</span> <span class="p">}</span>
+</pre></div>
+
+<p><em>NOTE: Post processing will not even <em>start</em> if the attachment is not valid
+according to the validations. Your callbacks and processors will <em>only</em> be
+called with valid attachments.</em></p>
+
+<div class="highlight highlight-ruby"><pre><span class="k">class</span> <span class="nc">Message</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+  <span class="n">has_attached_file</span> <span class="ss">:asset</span><span class="p">,</span> <span class="ss">styles</span><span class="p">:</span> <span class="p">{</span><span class="ss">thumb</span><span class="p">:</span> <span class="s2">"100x100#"</span><span class="p">}</span>
+
+  <span class="n">before_post_process</span> <span class="ss">:skip_for_audio</span>
+
+  <span class="k">def</span> <span class="nf">skip_for_audio</span>
+    <span class="o">!</span> <span class="sx">%w(audio/ogg application/ogg)</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="n">asset_content_type</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+<p>If you have other validations that depend on assignment order, the recommended
+course of action is to prevent the assignment of the attachment until
+afterwards, then assign manually:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="k">class</span> <span class="nc">Book</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+  <span class="n">has_attached_file</span> <span class="ss">:document</span><span class="p">,</span> <span class="ss">styles</span><span class="p">:</span> <span class="p">{</span><span class="ss">thumbnail</span><span class="p">:</span> <span class="s2">"60x60#"</span><span class="p">}</span>
+  <span class="n">validates_attachment</span> <span class="ss">:document</span><span class="p">,</span> <span class="ss">content_type</span><span class="p">:</span> <span class="p">{</span> <span class="ss">content_type</span><span class="p">:</span> <span class="s2">"application/pdf"</span> <span class="p">}</span>
+  <span class="n">validates_something_else</span> <span class="c1"># Other validations that conflict with Paperclip's</span>
+<span class="k">end</span>
+
+<span class="k">class</span> <span class="nc">BooksController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>
+  <span class="k">def</span> <span class="nf">create</span>
+    <span class="vi">@book</span> <span class="o">=</span> <span class="no">Book</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">book_params</span><span class="p">)</span>
+    <span class="vi">@book</span><span class="o">.</span><span class="n">document</span> <span class="o">=</span> <span class="n">params</span><span class="o">[</span><span class="ss">:book</span><span class="o">][</span><span class="ss">:document</span><span class="o">]</span>
+    <span class="vi">@book</span><span class="o">.</span><span class="n">save</span>
+    <span class="n">respond_with</span> <span class="vi">@book</span>
+  <span class="k">end</span>
+
+  <span class="kp">private</span>
+
+  <span class="k">def</span> <span class="nf">book_params</span>
+    <span class="n">params</span><span class="o">.</span><span class="n">require</span><span class="p">(</span><span class="ss">:book</span><span class="p">)</span><span class="o">.</span><span class="n">permit</span><span class="p">(</span><span class="ss">:title</span><span class="p">,</span> <span class="ss">:author</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+<p><strong>A note on content_type validations and security</strong></p>
+
+<p>You should ensure that you validate files to be only those MIME types you
+explicitly want to support.  If you don't, you could be open to
+<a href="https://www.owasp.org/index.php/Testing_for_Stored_Cross_site_scripting_(OWASP-DV-002)">XSS attacks</a>
+if a user uploads a file with a malicious HTML payload.</p>
+
+<p>If you're only interested in images, restrict your allowed content_types to
+image-y ones:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="n">validates_attachment</span> <span class="ss">:avatar</span><span class="p">,</span>
+  <span class="ss">:content_type</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="ss">:content_type</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">"image/jpeg"</span><span class="p">,</span> <span class="s2">"image/gif"</span><span class="p">,</span> <span class="s2">"image/png"</span><span class="o">]</span> <span class="p">}</span>
+</pre></div>
+
+<p><code>Paperclip::ContentTypeDetector</code> will attempt to match a file's extension to an
+inferred content_type, regardless of the actual contents of the file.</p>
+
+<h1>
+<a name="user-content-security-validations" class="anchor" href="https://github.com/thoughtbot/paperclip#security-validations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Security Validations</h1>
+
+<p>Thanks to a report from <a href="http://homakov.blogspot.com/">Egor Homakov</a> we have
+taken steps to prevent people from spoofing Content-Types and getting data
+you weren't expecting onto your server.</p>
+
+<p>NOTE: Starting at version 4.0.0, all attachments are <em>required</em> to include a
+content_type validation, a file_name validation, or to explicitly state that
+they're not going to have either. <em>Paperclip will raise an error</em> if you do not
+do this.</p>
+
+<div class="highlight highlight-ruby"><pre><span class="k">class</span> <span class="nc">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+  <span class="n">has_attached_file</span> <span class="ss">:avatar</span>
+  <span class="c1"># Validate content type</span>
+  <span class="n">validates_attachment_content_type</span> <span class="ss">:avatar</span><span class="p">,</span> <span class="ss">:content_type</span> <span class="o">=&gt;</span> <span class="sr">/\Aimage/</span>
+  <span class="c1"># Validate filename</span>
+  <span class="n">validates_attachment_file_name</span> <span class="ss">:avatar</span><span class="p">,</span> <span class="ss">:matches</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="sr">/png\Z/</span><span class="p">,</span> <span class="sr">/jpe?g\Z/</span><span class="o">]</span>
+  <span class="c1"># Explicitly do not validate</span>
+  <span class="n">do_not_validate_attachment_file_type</span> <span class="ss">:avatar</span>
+<span class="k">end</span>
+</pre></div>
+
+<p>This keeps Paperclip secure-by-default, and will prevent people trying to mess
+with your filesystem.</p>
+
+<p>NOTE: Also starting at version 4.0.0, Paperclip has another validation that
+cannot be turned off. This validation will prevent content type spoofing. That
+is, uploading a PHP document (for example) as part of the EXIF tags of a
+well-formed JPEG. This check is limited to the media type (the first part of the
+MIME type, so, 'text' in 'text/plain'). This will prevent HTML documents from
+being uploaded as JPEGs, but will not prevent GIFs from being uploaded with a
+.jpg extension. This validation will only add validation errors to the form. It
+will not cause Errors to be raised.</p>
+
+<p>This can sometimes cause false validation errors in applications that use custom 
+file extensions. In these cases you may wish to add your custom extension to the
+list of file extensions allowed for your mime type configured by the mime-types 
+gem:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="c1"># Allow ".foo" as an extension for files with the mime type "text/plain".</span>
+<span class="n">text_plain</span> <span class="o">=</span> <span class="no">MIME</span><span class="o">::</span><span class="no">Types</span><span class="o">[</span><span class="s2">"text/plain"</span><span class="o">].</span><span class="n">first</span>
+<span class="n">text_plain</span><span class="o">.</span><span class="n">extensions</span> <span class="o">&lt;&lt;</span> <span class="s2">"foo"</span>
+<span class="no">MIME</span><span class="o">::</span><span class="no">Types</span><span class="o">.</span><span class="n">index_extensions</span> <span class="n">text_plain</span>
+</pre></div>
+
+<h2>
+<a name="user-content-defaults" class="anchor" href="https://github.com/thoughtbot/paperclip#defaults" aria-hidden="true"><span class="octicon octicon-link"></span></a>Defaults</h2>
+
+<p>Global defaults for all your paperclip attachments can be defined by changing the Paperclip::Attachment.default_options Hash, this can be useful for setting your default storage settings per example so you won't have to define them in every has_attached_file definition.</p>
+
+<p>If you're using Rails you can define a Hash with default options in config/application.rb or in any of the config/environments/*.rb files on config.paperclip_defaults, these will get merged into Paperclip::Attachment.default_options as your Rails app boots. An example:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="k">module</span> <span class="nn">YourApp</span>
+  <span class="k">class</span> <span class="nc">Application</span> <span class="o">&lt;</span> <span class="no">Rails</span><span class="o">::</span><span class="no">Application</span>
+    <span class="c1"># Other code...</span>
+
+    <span class="n">config</span><span class="o">.</span><span class="n">paperclip_defaults</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:storage</span> <span class="o">=&gt;</span> <span class="ss">:fog</span><span class="p">,</span> <span class="ss">:fog_credentials</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="ss">:provider</span> <span class="o">=&gt;</span> <span class="s2">"Local"</span><span class="p">,</span> <span class="ss">:local_root</span> <span class="o">=&gt;</span> <span class="s2">"</span><span class="si">#{</span><span class="no">Rails</span><span class="o">.</span><span class="n">root</span><span class="si">}</span><span class="s2">/public"</span><span class="p">},</span> <span class="ss">:fog_directory</span> <span class="o">=&gt;</span> <span class="s2">""</span><span class="p">,</span> <span class="ss">:fog_host</span> <span class="o">=&gt;</span> <span class="s2">"localhost"</span><span class="p">}</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+<p>Another option is to directly modify the Paperclip::Attachment.default_options Hash, this method works for non-Rails applications or is an option if you prefer to place the Paperclip default settings in an initializer.</p>
+
+<p>An example Rails initializer would look something like this:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="no">Paperclip</span><span class="o">::</span><span class="no">Attachment</span><span class="o">.</span><span class="n">default_options</span><span class="o">[</span><span class="ss">:storage</span><span class="o">]</span> <span class="o">=</span> <span class="ss">:fog</span>
+<span class="no">Paperclip</span><span class="o">::</span><span class="no">Attachment</span><span class="o">.</span><span class="n">default_options</span><span class="o">[</span><span class="ss">:fog_credentials</span><span class="o">]</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:provider</span> <span class="o">=&gt;</span> <span class="s2">"Local"</span><span class="p">,</span> <span class="ss">:local_root</span> <span class="o">=&gt;</span> <span class="s2">"</span><span class="si">#{</span><span class="no">Rails</span><span class="o">.</span><span class="n">root</span><span class="si">}</span><span class="s2">/public"</span><span class="p">}</span>
+<span class="no">Paperclip</span><span class="o">::</span><span class="no">Attachment</span><span class="o">.</span><span class="n">default_options</span><span class="o">[</span><span class="ss">:fog_directory</span><span class="o">]</span> <span class="o">=</span> <span class="s2">""</span>
+<span class="no">Paperclip</span><span class="o">::</span><span class="no">Attachment</span><span class="o">.</span><span class="n">default_options</span><span class="o">[</span><span class="ss">:fog_host</span><span class="o">]</span> <span class="o">=</span> <span class="s2">"http://localhost:3000"</span>
+</pre></div>
+
+<h2>
+<a name="user-content-migrations-1" class="anchor" href="https://github.com/thoughtbot/paperclip#migrations-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Migrations</h2>
+
+<p>Paperclip defines several migration methods which can be used to create necessary columns in your
+model. There are two types of method:</p>
+
+<h3>
+<a name="user-content-table-definition" class="anchor" href="https://github.com/thoughtbot/paperclip#table-definition" aria-hidden="true"><span class="octicon octicon-link"></span></a>Table Definition</h3>
+
+<div class="highlight highlight-ruby"><pre><span class="k">class</span> <span class="nc">AddAttachmentToUsers</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Migration</span>
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">up</span>
+    <span class="n">create_table</span> <span class="ss">:users</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span>
+      <span class="n">t</span><span class="o">.</span><span class="n">attachment</span> <span class="ss">:avatar</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+<p>If you're using Rails 3.2 or newer, this method works in <code>change</code> method as well:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="k">class</span> <span class="nc">AddAttachmentToUsers</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Migration</span>
+  <span class="k">def</span> <span class="nf">change</span>
+    <span class="n">create_table</span> <span class="ss">:users</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span>
+      <span class="n">t</span><span class="o">.</span><span class="n">attachment</span> <span class="ss">:avatar</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+<h3>
+<a name="user-content-schema-definition" class="anchor" href="https://github.com/thoughtbot/paperclip#schema-definition" aria-hidden="true"><span class="octicon octicon-link"></span></a>Schema Definition</h3>
+
+<div class="highlight highlight-ruby"><pre><span class="k">class</span> <span class="nc">AddAttachmentToUsers</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Migration</span>
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">up</span>
+    <span class="n">add_attachment</span> <span class="ss">:users</span><span class="p">,</span> <span class="ss">:avatar</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">down</span>
+    <span class="n">remove_attachment</span> <span class="ss">:users</span><span class="p">,</span> <span class="ss">:avatar</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+<p>If you're using Rails 3.2 or newer, you only need <code>add_attachment</code> in your <code>change</code> method:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="k">class</span> <span class="nc">AddAttachmentToUsers</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Migration</span>
+  <span class="k">def</span> <span class="nf">change</span>
+    <span class="n">add_attachment</span> <span class="ss">:users</span><span class="p">,</span> <span class="ss">:avatar</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+<h3>
+<a name="user-content-vintage-syntax" class="anchor" href="https://github.com/thoughtbot/paperclip#vintage-syntax" aria-hidden="true"><span class="octicon octicon-link"></span></a>Vintage syntax</h3>
+
+<p>Vintage syntax (such as <code>t.has_attached_file</code> and <code>drop_attached_file</code>) are still supported in
+Paperclip 3.x, but you're advised to update those migration files to use this new syntax.</p>
+
+<h2>
+<a name="user-content-storage" class="anchor" href="https://github.com/thoughtbot/paperclip#storage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Storage</h2>
+
+<p>Paperclip ships with 3 storage adapters:</p>
+
+<ul class="task-list">
+<li>File Storage</li>
+<li>S3 Storage (via <code>aws-sdk</code>)</li>
+<li>Fog Storage</li>
+</ul><p>If you would like to use Paperclip with another storage, you can install these
+gems along side with Paperclip:</p>
+
+<ul class="task-list">
+<li><a href="https://github.com/gmontard/paperclip-azure-storage">paperclip-azure-storage</a></li>
+<li><a href="https://github.com/janko-m/paperclip-dropbox">paperclip-dropbox</a></li>
+</ul><h3>
+<a name="user-content-understanding-storage" class="anchor" href="https://github.com/thoughtbot/paperclip#understanding-storage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Understanding Storage</h3>
+
+<p>The files that are assigned as attachments are, by default, placed in the
+directory specified by the <code>:path</code> option to <code>has_attached_file</code>. By default, this
+location is <code>:rails_root/public/system/:class/:attachment/:id_partition/:style/:filename</code>.
+This location was chosen because on standard Capistrano deployments, the
+<code>public/system</code> directory is symlinked to the app's shared directory, meaning it
+will survive between deployments. For example, using that <code>:path</code>, you may have a
+file at</p>
+
+<pre><code>/data/myapp/releases/20081229172410/public/system/users/avatar/000/000/013/small/my_pic.png
+</code></pre>
+
+<p><em><strong>NOTE</strong>: This is a change from previous versions of Paperclip, but is overall a
+safer choice for the default file store.</em></p>
+
+<p>You may also choose to store your files using Amazon's S3 service. To do so, include
+the <code>aws-sdk</code> gem in your Gemfile:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="n">gem</span> <span class="s1">'aws-sdk'</span><span class="p">,</span> <span class="s1">'~&gt; 1.5.7'</span>
+</pre></div>
+
+<p>And then you can specify using S3 from <code>has_attached_file</code>.
+You can find more information about configuring and using S3 storage in
+<a href="http://rubydoc.info/gems/paperclip/Paperclip/Storage/S3">the <code>Paperclip::Storage::S3</code> documentation</a>.</p>
+
+<p>Files on the local filesystem (and in the Rails app's public directory) will be
+available to the internet at large. If you require access control, it's
+possible to place your files in a different location. You will need to change
+both the <code>:path</code> and <code>:url</code> options in order to make sure the files are unavailable
+to the public. Both <code>:path</code> and <code>:url</code> allow the same set of interpolated
+variables.</p>
+
+<h2>
+<a name="user-content-post-processing" class="anchor" href="https://github.com/thoughtbot/paperclip#post-processing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Post Processing</h2>
+
+<p>Paperclip supports an extensible selection of post-processors. When you define
+a set of styles for an attachment, by default it is expected that those
+"styles" are actually "thumbnails". However, you can do much more than just
+thumbnail images. By defining a subclass of Paperclip::Processor, you can
+perform any processing you want on the files that are attached. Any file in
+your Rails app's <code>lib/paperclip</code> and <code>lib/paperclip_processors</code> directories is
+automatically loaded by paperclip, allowing you to easily define custom
+processors. You can specify a processor with the :processors option to
+<code>has_attached_file</code>:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="n">has_attached_file</span> <span class="ss">:scan</span><span class="p">,</span> <span class="ss">:styles</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="ss">:text</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="ss">:quality</span> <span class="o">=&gt;</span> <span class="ss">:better</span> <span class="p">}</span> <span class="p">},</span>
+                         <span class="ss">:processors</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="ss">:ocr</span><span class="o">]</span>
+</pre></div>
+
+<p>This would load the hypothetical class Paperclip::Ocr, which would have the
+hash "{ :quality =&gt; :better }" passed to it along with the uploaded file. For
+more information about defining processors, see Paperclip::Processor.</p>
+
+<p>The default processor is Paperclip::Thumbnail. For backwards compatibility
+reasons, you can pass a single geometry string or an array containing a
+geometry and a format, which the file will be converted to, like so:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="n">has_attached_file</span> <span class="ss">:avatar</span><span class="p">,</span> <span class="ss">:styles</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="ss">:thumb</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">"32x32#"</span><span class="p">,</span> <span class="ss">:png</span><span class="o">]</span> <span class="p">}</span>
+</pre></div>
+
+<p>This will convert the "thumb" style to a 32x32 square in png format, regardless
+of what was uploaded. If the format is not specified, it is kept the same (i.e.
+jpgs will remain jpgs). For more information on the accepted style formats, see
+<a href="http://www.imagemagick.org/script/command-line-processing.php#geometry">here</a>.</p>
+
+<p>Multiple processors can be specified, and they will be invoked in the order
+they are defined in the :processors array. Each successive processor will
+be given the result of the previous processor's execution. All processors will
+receive the same parameters, which are what you define in the :styles hash.
+For example, assuming we had this definition:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="n">has_attached_file</span> <span class="ss">:scan</span><span class="p">,</span> <span class="ss">:styles</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="ss">:text</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="ss">:quality</span> <span class="o">=&gt;</span> <span class="ss">:better</span> <span class="p">}</span> <span class="p">},</span>
+                         <span class="ss">:processors</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="ss">:rotator</span><span class="p">,</span> <span class="ss">:ocr</span><span class="o">]</span>
+</pre></div>
+
+<p>then both the :rotator processor and the :ocr processor would receive the
+options "{ :quality =&gt; :better }". This parameter may not mean anything to one
+or more or the processors, and they are expected to ignore it.</p>
+
+<p><em>NOTE: Because processors operate by turning the original attachment into the
+styles, no processors will be run if there are no styles defined.</em></p>
+
+<p>If you're interested in caching your thumbnail's width, height and size in the
+database, take a look at the <a href="https://github.com/teeparham/paperclip-meta">paperclip-meta</a> gem.</p>
+
+<p>Also, if you're interested in generating the thumbnail on-the-fly, you might want
+to look into the <a href="https://github.com/drpentode/Attachment-on-the-Fly">attachment_on_the_fly</a> gem.</p>
+
+<h2>
+<a name="user-content-events" class="anchor" href="https://github.com/thoughtbot/paperclip#events" aria-hidden="true"><span class="octicon octicon-link"></span></a>Events</h2>
+
+<p>Before and after the Post Processing step, Paperclip calls back to the model
+with a few callbacks, allowing the model to change or cancel the processing
+step. The callbacks are <code>before_post_process</code> and <code>after_post_process</code> (which
+are called before and after the processing of each attachment), and the
+attachment-specific <code>before_&lt;attachment&gt;_post_process</code> and
+<code>after_&lt;attachment&gt;_post_process</code>. The callbacks are intended to be as close to
+normal ActiveRecord callbacks as possible, so if you return false (specifically
+- returning nil is not the same) in a <code>before_filter</code>, the post processing step
+will halt. Returning false in an <code>after_filter</code> will not halt anything, but you
+can access the model and the attachment if necessary.</p>
+
+<p><em>NOTE: Post processing will not even <em>start</em> if the attachment is not valid
+according to the validations. Your callbacks and processors will <em>only</em> be
+called with valid attachments.</em></p>
+
+<div class="highlight highlight-ruby"><pre><span class="k">class</span> <span class="nc">Message</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+  <span class="n">has_attached_file</span> <span class="ss">:asset</span><span class="p">,</span> <span class="ss">styles</span><span class="p">:</span> <span class="p">{</span><span class="ss">thumb</span><span class="p">:</span> <span class="s2">"100x100#"</span><span class="p">}</span>
+
+  <span class="n">before_post_process</span> <span class="ss">:skip_for_audio</span>
+
+  <span class="k">def</span> <span class="nf">skip_for_audio</span>
+    <span class="o">!</span> <span class="sx">%w(audio/ogg application/ogg)</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="n">asset_content_type</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+<h2>
+<a name="user-content-uri-obfuscation" class="anchor" href="https://github.com/thoughtbot/paperclip#uri-obfuscation" aria-hidden="true"><span class="octicon octicon-link"></span></a>URI Obfuscation</h2>
+
+<p>Paperclip has an interpolation called <code>:hash</code> for obfuscating filenames of
+publicly-available files.</p>
+
+<p>Example Usage:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="n">has_attached_file</span> <span class="ss">:avatar</span><span class="p">,</span> <span class="p">{</span>
+    <span class="ss">:url</span> <span class="o">=&gt;</span> <span class="s2">"/system/:hash.:extension"</span><span class="p">,</span>
+    <span class="ss">:hash_secret</span> <span class="o">=&gt;</span> <span class="s2">"longSecretString"</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>The <code>:hash</code> interpolation will be replaced with a unique hash made up of whatever
+is specified in <code>:hash_data</code>. The default value for <code>:hash_data</code> is <code>":class/:attachment/:id/:style/:updated_at"</code>.</p>
+
+<p><code>:hash_secret</code> is required, an exception will be raised if <code>:hash</code> is used without <code>:hash_secret</code> present.</p>
+
+<p>For more on this feature read the author's own explanation. <a href="https://github.com/thoughtbot/paperclip/pull/416">https://github.com/thoughtbot/paperclip/pull/416</a></p>
+
+<h2>
+<a name="user-content-md5-checksum--fingerprint" class="anchor" href="https://github.com/thoughtbot/paperclip#md5-checksum--fingerprint" aria-hidden="true"><span class="octicon octicon-link"></span></a>MD5 Checksum / Fingerprint</h2>
+
+<p>A MD5 checksum of the original file assigned will be placed in the model if it
+has an attribute named fingerprint.  Following the user model migration example
+above, the migration would look like the following.</p>
+
+<div class="highlight highlight-ruby"><pre><span class="k">class</span> <span class="nc">AddAvatarFingerprintColumnToUser</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Migration</span>
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">up</span>
+    <span class="n">add_column</span> <span class="ss">:users</span><span class="p">,</span> <span class="ss">:avatar_fingerprint</span><span class="p">,</span> <span class="ss">:string</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">down</span>
+    <span class="n">remove_column</span> <span class="ss">:users</span><span class="p">,</span> <span class="ss">:avatar_fingerprint</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+<h2>
+<a name="user-content-file-preservation-for-soft-delete" class="anchor" href="https://github.com/thoughtbot/paperclip#file-preservation-for-soft-delete" aria-hidden="true"><span class="octicon octicon-link"></span></a>File Preservation for Soft-Delete</h2>
+
+<p>An option is available to preserve attachments in order to play nicely with soft-deleted models. (acts_as_paranoid, paranoia, etc.)</p>
+
+<div class="highlight highlight-ruby"><pre><span class="n">has_attached_file</span> <span class="ss">:some_attachment</span><span class="p">,</span> <span class="p">{</span>
+    <span class="ss">:preserve_files</span> <span class="o">=&gt;</span> <span class="s2">"true"</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>This will prevent <code>some_attachment</code> from being wiped out when the model gets destroyed, so it will still exist when the object is restored later.</p>
+
+<h2>
+<a name="user-content-custom-attachment-processors" class="anchor" href="https://github.com/thoughtbot/paperclip#custom-attachment-processors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Custom Attachment Processors</h2>
+
+<p>Custom attachment processors can be implemented and their only requirement is
+to inherit from <code>Paperclip::Processor</code> (see <code>lib/paperclip/processor.rb</code>).
+For example, when <code>:styles</code> are specified for an image attachment, the
+thumbnail processor (see <code>lib/paperclip/thumbnail.rb</code>) is loaded without having
+to specify it as a <code>:processor</code> parameter to <code>has_attached_file</code>.  When any
+other processor is defined it must be called out in the <code>:processors</code>
+parameter if it is to be applied to the attachment.  The thumbnail processor
+uses the imagemagick <code>convert</code> command to do the work of resizing image
+thumbnails.  It would be easy to create a custom processor that watermarks
+an image using imagemagick's <code>composite</code> command.  Following the
+implementation pattern of the thumbnail processor would be a way to implement a
+watermark processor.  All kinds of attachment processors can be created;
+a few utility examples would be compression and encryption processors.</p>
+
+<h2>
+<a name="user-content-dynamic-configuration" class="anchor" href="https://github.com/thoughtbot/paperclip#dynamic-configuration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dynamic Configuration</h2>
+
+<p>Callable objects (lambdas, Procs) can be used in a number of places for dynamic
+configuration throughout Paperclip.  This strategy exists in a number of
+components of the library but is most significant in the possibilities for
+allowing custom styles and processors to be applied for specific model
+instances, rather than applying defined styles and processors across all
+instances.</p>
+
+<h3>
+<a name="user-content-dynamic-styles" class="anchor" href="https://github.com/thoughtbot/paperclip#dynamic-styles" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dynamic Styles:</h3>
+
+<p>Imagine a user model that had different styles based on the role of the user.
+Perhaps some users are bosses (e.g. a User model instance responds to #boss?)
+and merit a bigger avatar thumbnail than regular users. The configuration to
+determine what style parameters are to be used based on the user role might
+look as follows where a boss will receive a <code>300x300</code> thumbnail otherwise a
+<code>100x100</code> thumbnail will be created.</p>
+
+<div class="highlight highlight-ruby"><pre><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+  <span class="n">has_attached_file</span> <span class="ss">:avatar</span><span class="p">,</span> <span class="ss">:styles</span> <span class="o">=&gt;</span> <span class="nb">lambda</span> <span class="p">{</span> <span class="o">|</span><span class="n">attachment</span><span class="o">|</span> <span class="p">{</span> <span class="ss">:thumb</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="n">attachment</span><span class="o">.</span><span class="n">instance</span><span class="o">.</span><span class="n">boss?</span> <span class="p">?</span> <span class="s2">"300x300&gt;"</span> <span class="p">:</span> <span class="s2">"100x100&gt;"</span><span class="p">)</span> <span class="p">}</span> <span class="p">}</span>
+<span class="k">end</span>
+</pre></div>
+
+<h3>
+<a name="user-content-dynamic-processors" class="anchor" href="https://github.com/thoughtbot/paperclip#dynamic-processors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dynamic Processors:</h3>
+
+<p>Another contrived example is a user model that is aware of which file processors
+should be applied to it (beyond the implied <code>thumbnail</code> processor invoked when
+<code>:styles</code> are defined). Perhaps we have a watermark processor available and it is
+only used on the avatars of certain models.  The configuration for this might be
+where the instance is queried for which processors should be applied to it.
+Presumably some users might return <code>[:thumbnail, :watermark]</code> for its
+processors, where a defined <code>watermark</code> processor is invoked after the
+<code>thumbnail</code> processor already defined by Paperclip.</p>
+
+<div class="highlight highlight-ruby"><pre><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+  <span class="n">has_attached_file</span> <span class="ss">:avatar</span><span class="p">,</span> <span class="ss">:processors</span> <span class="o">=&gt;</span> <span class="nb">lambda</span> <span class="p">{</span> <span class="o">|</span><span class="n">instance</span><span class="o">|</span> <span class="n">instance</span><span class="o">.</span><span class="n">processors</span> <span class="p">}</span>
+  <span class="kp">attr_accessor</span> <span class="ss">:processors</span>
+<span class="k">end</span>
+</pre></div>
+
+<h2>
+<a name="user-content-logging" class="anchor" href="https://github.com/thoughtbot/paperclip#logging" aria-hidden="true"><span class="octicon octicon-link"></span></a>Logging</h2>
+
+<p>By default Paperclip outputs logging according to your logger level. If you want to disable logging (e.g. during testing) add this in to your environment's configuration:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="no">Your</span><span class="o">::</span><span class="no">Application</span><span class="o">.</span><span class="n">configure</span> <span class="k">do</span>
+<span class="o">.</span><span class="n">.</span><span class="o">.</span>
+  <span class="no">Paperclip</span><span class="o">.</span><span class="n">options</span><span class="o">[</span><span class="ss">:log</span><span class="o">]</span> <span class="o">=</span> <span class="kp">false</span>
+<span class="o">.</span><span class="n">.</span><span class="o">.</span>
+<span class="k">end</span>
+</pre></div>
+
+<p>More information in the <a href="http://rdoc.info/github/thoughtbot/paperclip/Paperclip.options">rdocs</a></p>
+
+<h2>
+<a name="user-content-deployment" class="anchor" href="https://github.com/thoughtbot/paperclip#deployment" aria-hidden="true"><span class="octicon octicon-link"></span></a>Deployment</h2>
+
+<p>Paperclip is aware of new attachment styles you have added in previous deploys. The only thing you should do after each deployment is to call
+<code>rake paperclip:refresh:missing_styles</code>.  It will store current attachment styles in <code>RAILS_ROOT/public/system/paperclip_attachments.yml</code>
+by default. You can change it by:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="no">Paperclip</span><span class="o">.</span><span class="n">registered_attachments_styles_path</span> <span class="o">=</span> <span class="s1">'/tmp/config/paperclip_attachments.yml'</span>
+</pre></div>
+
+<p>Here is an example for Capistrano:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="n">namespace</span> <span class="ss">:deploy</span> <span class="k">do</span>
+  <span class="n">desc</span> <span class="s2">"build missing paperclip styles"</span>
+  <span class="n">task</span> <span class="ss">:build_missing_paperclip_styles</span> <span class="k">do</span>
+    <span class="n">on</span> <span class="n">roles</span><span class="p">(</span><span class="ss">:app</span><span class="p">)</span> <span class="k">do</span>
+      <span class="n">execute</span> <span class="s2">"cd </span><span class="si">#{</span><span class="n">current_path</span><span class="si">}</span><span class="s2">; RAILS_ENV=production bundle exec rake paperclip:refresh:missing_styles"</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">after</span><span class="p">(</span><span class="s2">"deploy:compile_assets"</span><span class="p">,</span> <span class="s2">"deploy:build_missing_paperclip_styles"</span><span class="p">)</span>
+</pre></div>
+
+<p>Now you don't have to remember to refresh thumbnails in production every time you add a new style.
+Unfortunately it does not work with dynamic styles - it just ignores them.</p>
+
+<p>If you already have a working app and don't want <code>rake paperclip:refresh:missing_styles</code> to refresh old pictures, you need to tell
+Paperclip about existing styles. Simply create a <code>paperclip_attachments.yml</code> file by hand. For example:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+  <span class="n">has_attached_file</span> <span class="ss">:avatar</span><span class="p">,</span> <span class="ss">:styles</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="ss">:thumb</span> <span class="o">=&gt;</span> <span class="s1">'x100'</span><span class="p">,</span> <span class="ss">:croppable</span> <span class="o">=&gt;</span> <span class="s1">'600x600&gt;'</span><span class="p">,</span> <span class="ss">:big</span> <span class="o">=&gt;</span> <span class="s1">'1000x1000&gt;'</span><span class="p">}</span>
+<span class="k">end</span>
+
+<span class="k">class</span> <span class="nc">Book</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+  <span class="n">has_attached_file</span> <span class="ss">:cover</span><span class="p">,</span> <span class="ss">:styles</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="ss">:small</span> <span class="o">=&gt;</span> <span class="s1">'x100'</span><span class="p">,</span> <span class="ss">:large</span> <span class="o">=&gt;</span> <span class="s1">'1000x1000&gt;'</span><span class="p">}</span>
+  <span class="n">has_attached_file</span> <span class="ss">:sample</span><span class="p">,</span> <span class="ss">:styles</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="ss">:thumb</span> <span class="o">=&gt;</span> <span class="s1">'x100'</span><span class="p">}</span>
+<span class="k">end</span>
+</pre></div>
+
+<p>Then in <code>RAILS_ROOT/public/system/paperclip_attachments.yml</code>:</p>
+
+<div class="highlight highlight-yml"><pre><span class="nn">---</span>
+<span class="l-Scalar-Plain">:User</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">:avatar</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">:thumb</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">:croppable</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">:big</span>
+<span class="l-Scalar-Plain">:Book</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">:cover</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">:small</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">:large</span>
+  <span class="l-Scalar-Plain">:sample</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">:thumb</span>
+</pre></div>
+
+<h2>
+<a name="user-content-testing" class="anchor" href="https://github.com/thoughtbot/paperclip#testing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Testing</h2>
+
+<p>Paperclip provides rspec-compatible matchers for testing attachments. See the
+documentation on <a href="http://rubydoc.info/gems/paperclip/Paperclip/Shoulda/Matchers">Paperclip::Shoulda::Matchers</a>
+for more information.</p>
+
+<p><strong>Parallel Tests</strong></p>
+
+<p>Because of the default <code>path</code> for Paperclip storage, if you try to run tests in
+parallel, you may find that files get overwritten because the same path is being
+calculated for them in each test process. While this fix works for
+parallel_tests, a similar concept should be used for any other mechanism for
+running tests concurrently.</p>
+
+<div class="highlight highlight-ruby"><pre><span class="k">if</span> <span class="no">ENV</span><span class="o">[</span><span class="s1">'PARALLEL_TEST_GROUPS'</span><span class="o">]</span>
+  <span class="no">Paperclip</span><span class="o">::</span><span class="no">Attachment</span><span class="o">.</span><span class="n">default_options</span><span class="o">[</span><span class="ss">:path</span><span class="o">]</span> <span class="o">=</span> <span class="s2">":rails_root/public/system/:rails_env/</span><span class="si">#{</span><span class="no">ENV</span><span class="o">[</span><span class="s1">'TEST_ENV_NUMBER'</span><span class="o">].</span><span class="n">to_i</span><span class="si">}</span><span class="s2">/:class/:attachment/:id_partition/:filename"</span>
+<span class="k">else</span>
+  <span class="no">Paperclip</span><span class="o">::</span><span class="no">Attachment</span><span class="o">.</span><span class="n">default_options</span><span class="o">[</span><span class="ss">:path</span><span class="o">]</span> <span class="o">=</span> <span class="s2">":rails_root/public/system/:rails_env/:class/:attachment/:id_partition/:filename"</span>
+<span class="k">end</span>
+</pre></div>
+
+<p>The important part here being the inclusion of <code>ENV['TEST_ENV_NUMBER']</code>, or the
+similar mechanism for whichever parallel testing library you use.</p>
+
+<p><strong>Integration Tests</strong></p>
+
+<p>Using integration tests with FactoryGirl may save multiple copies of
+your test files within the app. To avoid this, specify a custom path in
+the <code>config/environments/test.rb</code> like so:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="no">Paperclip</span><span class="o">::</span><span class="no">Attachment</span><span class="o">.</span><span class="n">default_options</span><span class="o">[</span><span class="ss">:path</span><span class="o">]</span> <span class="o">=</span> <span class="s2">"</span><span class="si">#{</span><span class="no">Rails</span><span class="o">.</span><span class="n">root</span><span class="si">}</span><span class="s2">/spec/test_files/:class/:id_partition/:style.:extension"</span>
+</pre></div>
+
+<p>Then, make sure to delete that directory after the test suite runs by adding
+this to <code>spec_helper.rb</code>.</p>
+
+<div class="highlight highlight-ruby"><pre><span class="n">config</span><span class="o">.</span><span class="n">after</span><span class="p">(</span><span class="ss">:suite</span><span class="p">)</span> <span class="k">do</span>
+  <span class="no">FileUtils</span><span class="o">.</span><span class="n">rm_rf</span><span class="p">(</span><span class="no">Dir</span><span class="o">[</span><span class="s2">"</span><span class="si">#{</span><span class="no">Rails</span><span class="o">.</span><span class="n">root</span><span class="si">}</span><span class="s2">/spec/test_files/"</span><span class="o">]</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+<h2>
+<a name="user-content-contributing" class="anchor" href="https://github.com/thoughtbot/paperclip#contributing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing</h2>
+
+<p>If you'd like to contribute a feature or bugfix: Thanks! To make sure your
+fix/feature has a high chance of being included, please read the following
+guidelines:</p>
+
+<ol class="task-list">
+<li>Post a <a href="https://github.com/thoughtbot/paperclip/compare/">pull request</a>.</li>
+<li>Make sure there are tests! We will not accept any patch that is not tested.
+It's a rare time when explicit tests aren't needed. If you have questions
+about writing tests for paperclip, please open a
+<a href="https://github.com/thoughtbot/paperclip/issues/new">GitHub issue</a>.</li>
+</ol><p>Please see <code>CONTRIBUTING.md</code> for more details on contributing and running test.</p>
+
+<h2>
+<a name="user-content-credits" class="anchor" href="https://github.com/thoughtbot/paperclip#credits" aria-hidden="true"><span class="octicon octicon-link"></span></a>Credits</h2>
+
+<p><a href="./thoughtbot paperclip_files/687474703a2f2f74686f75676874626f742e636f6d2f6c6f676f2e706e67" target="_blank"><img src="./thoughtbot paperclip_files/687474703a2f2f74686f75676874626f742e636f6d2f6c6f676f2e706e67" alt="thoughtbot" data-canonical-src="http://thoughtbot.com/logo.png" style="max-width:100%;"></a></p>
+
+<p>Paperclip is maintained and funded by <a href="http://thoughtbot.com/community">thoughtbot, inc</a></p>
+
+<p>Thank you to all <a href="https://github.com/thoughtbot/paperclip/contributors">the contributors</a>!</p>
+
+<p>The names and logos for thoughtbot are trademarks of thoughtbot, inc.</p>
+
+<h2>
+<a name="user-content-license" class="anchor" href="https://github.com/thoughtbot/paperclip#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>Paperclip is Copyright © 2008-2014 thoughtbot, inc. It is free software, and may be
+redistributed under the terms specified in the MIT-LICENSE file.</p></article>
+  </div>
+
+
+        </div>
+
+      </div><!-- /.repo-container -->
+      <div class="modal-backdrop"></div>
+    </div><!-- /.container -->
+  </div><!-- /.site -->
+
+
+    </div><!-- /.wrapper -->
+
+      <div class="container">
+  <div class="site-footer">
+    <ul class="site-footer-links right">
+      <li><a href="https://status.github.com/">Status</a></li>
+      <li><a href="http://developer.github.com/">API</a></li>
+      <li><a href="http://training.github.com/">Training</a></li>
+      <li><a href="http://shop.github.com/">Shop</a></li>
+      <li><a href="https://github.com/blog">Blog</a></li>
+      <li><a href="https://github.com/about">About</a></li>
+
+    </ul>
+
+    <a href="https://github.com/" aria-label="Homepage">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+    </a>
+
+    <ul class="site-footer-links">
+      <li>© 2014 <span title="0.05857s from github-fe117-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="https://github.com/site/terms">Terms</a></li>
+        <li><a href="https://github.com/site/privacy">Privacy</a></li>
+        <li><a href="https://github.com/security">Security</a></li>
+        <li><a href="https://github.com/contact">Contact</a></li>
+    </ul>
+  </div><!-- /.site-footer -->
+</div><!-- /.container -->
+
+
+    <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
+  <div class="fullscreen-container js-suggester-container">
+    <div class="textarea-wrap">
+      <textarea name="fullscreen-contents" id="fullscreen-contents" class="fullscreen-contents js-fullscreen-contents js-suggester-field" placeholder=""></textarea>
+    </div>
+  </div>
+  <div class="fullscreen-sidebar">
+    <a href="https://github.com/thoughtbot/paperclip#" class="exit-fullscreen js-exit-fullscreen tooltipped tooltipped-w" aria-label="Exit Zen Mode">
+      <span class="mega-octicon octicon-screen-normal"></span>
+    </a>
+    <a href="https://github.com/thoughtbot/paperclip#" class="theme-switcher js-theme-switcher tooltipped tooltipped-w" aria-label="Switch themes">
+      <span class="octicon octicon-color-mode"></span>
+    </a>
+  </div>
+</div>
+
+
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="octicon octicon-alert"></span>
+      <a href="https://github.com/thoughtbot/paperclip#" class="octicon octicon-x flash-close js-ajax-error-dismiss" aria-label="Dismiss error"></a>
+      Something went wrong with that request. Please try again.
+    </div>
+
+
+      <script crossorigin="anonymous" src="./thoughtbot paperclip_files/frameworks-ba50a1ca41995f0b006425c6db96c5669d18fd98.js" type="text/javascript"></script>
+      <script async="async" crossorigin="anonymous" src="./thoughtbot paperclip_files/github-6f35987d9d3b93692008c0e05b654002c4c9eb31.js" type="text/javascript"></script>
+      
+      
+        <script async="" src="./thoughtbot paperclip_files/analytics.js"></script>
+  
+
+
+<div id="global-zeroclipboard-html-bridge" class="global-zeroclipboard-container" style="position: absolute; left: 0px; top: -9999px; width: 1px; height: 1px; z-index: 999999999;"><object id="global-zeroclipboard-flash-bridge" name="global-zeroclipboard-flash-bridge" width="100%" height="100%" type="application/x-shockwave-flash" data="https://assets-cdn.github.com/flash/ZeroClipboard.v2.1.6.swf"><param name="allowScriptAccess" value="always"><param name="allowNetworking" value="all"><param name="menu" value="false"><param name="wmode" value="transparent"><param name="flashvars" value="trustedOrigins=github.com%2C%2F%2Fgithub.com%2Chttps%3A%2F%2Fgithub.com&amp;swfObjectId=global-zeroclipboard-flash-bridge"></object></div>    <div class="facebox" id="facebox" style="display:none;">       <div class="facebox-popup">         <div class="facebox-content">         </div>         <button type="button" class="facebox-close js-facebox-close" aria-label="Close modal">           <span class="octicon octicon-remove-close"></span>         </button>       </div>     </div></body></html>
